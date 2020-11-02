@@ -1,0 +1,32 @@
+<div class="container">
+    <div (click)="changeSubMenu(1)" 
+            [ngClass]="{'submenu2': subMenu === 1,
+                        'submenu': subMenu !== 1}" >
+        <h4>Select Doctor</h4>
+        <p>Select doctor and book appointment for consulting</p>
+    </div>
+    <div (click)="changeSubMenu(2)"
+        [ngClass]="{'submenu2': subMenu === 2,
+                        'submenu': subMenu !== 2}" >
+        <h4>Book Video Consultation</h4>
+        <p>Check the avalaible timing and book video consultation</p>
+    </div>
+    <div class="submenu"  (click)="changeSubMenu(3)"
+        [ngClass]="{'submenu2': subMenu === 3,
+            'submenu': subMenu !== 3}" >
+        <h4>Pay Online</h4>
+        <p>Pay the doctors directly online. Its easy and secure</p>
+    </div>
+    <!-- <ul>
+        <li (click)="changeSubMenu(1)"><a>Select Doctor</a></li>
+        <li (click)="changeSubMenu(2)"><a>Book Video Consultation</a></li>
+        <li (click)="changeSubMenu(3)"><a>Pay Online</a></li>
+        [ngStyle]="{'backgroundColor': subMenu === 1 ? '#01BAF2': 'white'}"
+    </ul> -->
+    <div>
+        <app-doctors [doctors]="doctors" (sendDoctor)="getDoctor($event)" *ngIf="subMenu === 1"></app-doctors>
+        <app-book-video-consultation [doctor]="doctor" (sendAppointment)="getAppointment($event)" *ngIf="subMenu === 2"></app-book-video-consultation>
+        <app-pay-online *ngIf="subMenu === 3" [doctor]="doctor" [appointment]="appointment"></app-pay-online>
+    </div>
+    
+</div>

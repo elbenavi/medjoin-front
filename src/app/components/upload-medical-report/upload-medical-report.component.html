@@ -1,0 +1,25 @@
+<div class="modal-header">
+    <h4 class="modal-title">Hi there!</h4>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    
+    <div class="form-group">
+        <label for="fileid">Upload File</label>
+        <input type="file" (change)="onFileSelect($event)" class="form-control" id="fileid" aria-describedby="emailHelp">
+      </div>
+      <div class="form-group">
+        <label for="nameFile">Name file</label>
+        <input type="text" class="form-control" id="nameFile" [(ngModel)]="reportName">
+      </div>
+      <button class="btn btn-primary" (click)="uploadFile()">Upload</button>
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">Example select</label>
+        <select multiple  class="form-control" id="exampleFormControlSelect1" [(ngModel)]="medicalReportsSeleted">
+          <option *ngFor="let medicalReport of medicalReports" [value]="medicalReport">{{medicalReport.reportName}}</option>
+        </select>
+      </div>
+      <button class="btn btn-primary" (click)="sendMedicalReports()" [disabled]="medicalReportsSeleted.length === 0">Send Medical Reports</button>
+</div>

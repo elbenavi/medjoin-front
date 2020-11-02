@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "url": "https://www.timandorra.com/wp-content/uploads/2016/11/Imagen-no-disponible.png",
+        "name": "eduardo benavides",
+        "especialistation": "Ing Devops",
+        "tags": ["jenkins", "azure devops", "metrics"],
+        "rate": "50",
+        "schedule": [
+            {
+                "day": "monday",
+                "startTime": "08:00",
+                "endTime": "17:00"
+            },
+            {
+                "day": "Wenesday",
+                "startTime": "08:00",
+                "endTime": "17:00"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "url": "https://www.timandorra.com/wp-content/uploads/2016/11/Imagen-no-disponible.png",
+        "name": "Julian velez",
+        "especialistation": "Analist Test",
+        "tags": ["Selenium", "Cucumber"],
+        "rate": "25",
+        "schedule": [
+            {
+                "day": "monday",
+                "startTime": "08:00",
+                "endTime": "17:00"
+            },
+            {
+                "day": "Friday",
+                "startTime": "08:00",
+                "endTime": "17:00"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "url": "https://www.timandorra.com/wp-content/uploads/2016/11/Imagen-no-disponible.png",
+        "name": "Said herrera",
+        "especialistation": "Ing Simon",
+        "tags": ["Bandera colores", "Yo soy", "Simon"],
+        "rate": "20",
+        "schedule": [
+            {
+                "day": "monday",
+                "startTime": "08:00",
+                "endTime": "17:00"
+            },
+            {
+                "day": "Sunday",
+                "startTime": "08:00",
+                "endTime": "17:00"
+            }
+        ]
+    }
+]

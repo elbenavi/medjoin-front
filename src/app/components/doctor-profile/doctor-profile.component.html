@@ -1,0 +1,54 @@
+<div class="modal-header">
+  <h4 class="modal-title">Doctor's Profile</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <!-- <img [src]="'http://localhost:5000/resources/files/' + doctor.medicalDetail.urlLicenseCertificate" alt="">
+    <p>{{ doctor.firstName }} {{doctor.lastName}}</p>
+    <p class="card-text"><span *ngFor="let specialization of doctor.specializations">{{ specialization.specializationName }}</span></p>
+    <h3>Consultation Charges</h3>
+    <p> 
+        The video COnsultation charge of {{doctor.rate}}$ for 30 min can be paid online
+    </p>
+    <p> 
+        <span *ngFor="let tag of doctor.tags">{{tag.tagName}}</span>
+    </p>
+    <h3>Timing Slot</h3> -->
+
+
+  <div class="profile-modal">
+    <div class="imageprofile">
+      <!-- <img [src]="'http://localhost:5000/resources/files/' + doctor.medicalDetail.urlLicenseCertificate"  alt="..."> -->
+      <img src="{{doctor.imgProfile | imageProfile}}" alt="...">
+    </div>
+    <div class="info">
+      <h4 class="name">DR. {{ doctor.firstName }} {{doctor.lastName}}</h4>
+       <h5 class="specialitation">Plastic Surgeon & Cosmetic Surgeon</h5>
+      <p>MS (Gen Surgery), MCG, DNB (Plastic Surgery)Bangalore, Karmataca</p>
+    </div>
+  </div>
+  <div class="schedule">
+    <h4>TIMING SLOTS</h4>
+    <div>
+      <p><span class="day">Monday</span><span class="time">9:30am-5:30pm</span></p>
+      <p><span class="day">Tuesday</span><span class="time">9:30am-5:30pm</span></p>
+      <p><span class="day">Wednesday</span><span class="time">9:30am-5:30pm</span></p>
+      <p><span class="day">Thursday</span><span class="time">9:30am-5:30pm</span></p>
+      <p><span class="day">Friday</span><span class="time">9:30am-5:30pm</span></p>
+    </div>
+  </div>
+
+  <div class="charges">
+    <h4>CONSULTATION CHARGE</h4>
+    <div>
+      The Video Consultation charge of <span>$50 for 30 min</span>
+    </div>
+  </div>
+</div>
+<div>
+  <p>
+    TERMS & CONDITIONS <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae odio ab aut debitis? Aut, modi
+    rem cum vitae debitis sequi </p>
+</div>

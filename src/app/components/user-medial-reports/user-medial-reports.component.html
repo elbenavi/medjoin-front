@@ -1,0 +1,35 @@
+<div class="container">
+
+  <div class="form-upload">
+    <div class="form-group input-group">
+      <label for="uploadId">Upload File</label>
+      <input type="file" (change)="onFileSelect($event)" [(ngModel)]="data.file" class="form-control" id="uploadId">
+
+      <label for="fileNameId">Name file</label>
+      <input type="text" class="form-control" id="fileNameId" [(ngModel)]="data.fileName">
+      <button class="btn btn-primary" (click)="uploadFile()">Upload</button>
+    </div>
+  </div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Report/Document Name</th>
+        <th scope="col">File Name</th>
+        <th scope="col">Upload Date</th>
+        <th scope="col">Upload Time</th>
+        <th scope="col">File Size</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let medicalReport of medicalReports">
+        <td>{{medicalReport.reportName}}</td>
+        <td>{{medicalReport.urlResource}}</td>
+        <td>{{medicalReport.uploadDate | date:'EEEE dd LLL yyyy'}}</td>
+        <td>{{medicalReport.uploadDate | date:'HH:mm aa'}}</td>
+        <td>{{medicalReport.sizeFile | filesize}}</td>
+        <td><button class="btn btn-danger" (click)="deleteReport(medicalReport)">Remove</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

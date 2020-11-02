@@ -1,0 +1,32 @@
+<!-- <ul class="list-group list-group-horizontal">
+    <li class="list-group-item"><a (click)="changeSubMenu(1)">UpComing Schedule</a></li>
+    <li class="list-group-item"><a (click)="changeSubMenu(2)">Consultation History</a></li>
+    <li class="list-group-item"><a (click)="changeSubMenu(3)">My Account</a></li>
+    <li class="list-group-item"><a (click)="changeSubMenu(4)">My Profile</a></li>
+</ul> -->
+
+<div class="container">
+    <div class="submenuuser" [ngStyle]="{'backgroundColor': subMenu === 1 ? '#EC525E': '#01BAF2'}"
+        (click)="changeSubMenu(1)">
+        <h4>UpComing Schedule</h4>
+    </div>
+    <div class="submenuuser" [ngStyle]="{'backgroundColor': subMenu === 2 ? '#EC525E': '#01BAF2'}"
+        (click)="changeSubMenu(2)">
+        <h4>Consultation History</h4>
+    </div>
+    <div class="submenuuser" [ngStyle]="{'backgroundColor': subMenu === 3 ? '#EC525E': '#01BAF2'}"
+        (click)="changeSubMenu(3)">
+        <h4>My Account</h4>
+    </div>
+    <div class="submenuuser" [ngStyle]="{'backgroundColor': subMenu === 4 ? '#EC525E': '#01BAF2'}"
+        (click)="changeSubMenu(4)">
+        <h4>My Profile</h4>
+    </div>
+
+    <div>
+        <app-doctor-appointment *ngIf="subMenu === 1" [appointments]="appointments"></app-doctor-appointment>
+        <app-history-consultation *ngIf="subMenu === 2" [appointments]="lastAppointments"></app-history-consultation>
+        <app-my-account-doctor *ngIf="subMenu === 3"></app-my-account-doctor>
+        <app-my-profile-doctor *ngIf="subMenu === 4"></app-my-profile-doctor>
+    </div>
+</div>

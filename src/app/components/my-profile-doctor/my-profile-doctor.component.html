@@ -1,0 +1,201 @@
+<!-- <h1>my-profile!</h1>
+
+<form  [formGroup]="formRegister" (ngSubmit)="save()">
+    <h2>Personal Information</h2>
+    <div class="form-group">
+        <label for="exampleInputEmail1">First Name</label>
+        <input type="name" formControlName="firstName" class="form-control" id="exampleInputfisrtname1" aria-describedby="nameHelp">
+        <small id="nameIdHelp1" class="form-text text-muted" *ngIf="firstNameInvalid">Required</small>  
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Last Name</label>
+        <input type="name" formControlName="lastName" class="form-control" id="exampleInputlastname1" aria-describedby="nameHelp">
+        <small id="nameIdHelp1" class="form-text text-muted" *ngIf="lastNameInvalid">Required</small>
+    </div>
+    <div class="form-group">
+        <label for="birthId">Date of Birth</label>
+        <input type="name" formControlName="dateOfBirth" class="form-control" id="birthId" aria-describedby="nameHelp">
+    </div>
+    <div class="form-group">
+        <label for="genderId">Gender</label>
+        <input type="name" formControlName="gender" class="form-control" id="genderId" aria-describedby="nameHelp">
+    </div>
+    <div class="form-group">
+        <label for="heightId">Height</label>
+        <input type="name" formControlName="Height" class="form-control" id="heightId" aria-describedby="nameHelp">
+    </div>
+    <div class="form-group">
+        <label for="weight">Weight</label>
+        <input type="name" formControlName="Weight" class="form-control" id="weight" aria-describedby="nameHelp">
+    </div>
+    <div class="form-group">
+        <label for="aboutId">About you</label>
+        <textarea type="name" formControlName="aboutYou" class="form-control" id="aboutId" aria-describedby="nameHelp"></textarea>
+    </div>
+
+    <h2>Contact Information</h2>
+    <div class="form-group">
+        <label for="addressId">Address</label>
+        <input type="email" formControlName="Address" class="form-control" id="addressId" aria-describedby="emailHelp"> 
+      </div>
+      <div class="form-group">
+        <label for="countryId">Country</label>
+        <input type="email" class="form-control" id="countryId" aria-describedby="emailHelp">
+      </div>
+      <div class="form-group">
+        <label for="stateId">State</label>
+        <input type="email" class="form-control" id="stateId" aria-describedby="emailHelp">
+      </div>
+      <div class="form-group">
+        <label for="cityId">City</label>
+        <input type="email" class="form-control" id="cityId" aria-describedby="emailHelp">
+      </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <small id="nameIdHelp1" class="form-text text-muted" *ngIf="emailInvalid">Required</small>  
+    </div>
+    <div class="form-group">
+        <label for="extInputEmail1">Phone Number</label>
+        <input type="text" formControlName="ext" class="form-control" id="extInputEmail1" aria-describedby="extHelp">
+        <small id="nameIdHelp1" class="form-text text-muted" *ngIf="extInvalid">Required</small>  
+      </div>
+      <div class="form-group">
+        <input type="text" formControlName="phone" class="form-control" id="exampleInputphone1" aria-describedby="phoneHelp">
+        <small id="nameIdHelp1" class="form-text text-muted" *ngIf="phoneInvalid">Required</small>  
+      </div>
+    <button type="submit" class="btn btn-primary">Update</button>
+  </form>
+ -->
+
+
+ <div class="profile-section">
+  <div class="image">
+    <img src="{{user.imgProfile | imageProfile}}"  alt="...">
+    <label for="imgProfile">
+      <img src="assets/images/edit-profile.png" alt="">
+    </label>
+    <input (change)="onFileSelect($event)" class="required input-text" id="imgProfile"
+      name="imgProfile" type="file" />
+  </div>
+  <div class="info">
+    <h4>{{user.firstName}} {{user.lastName}}</h4>
+    <p><span>{{user.gender}}</span></p>
+    <p><span>{{user.height}} cm, {{user.weight}} Kg.</span></p>
+    <p><span>{{user.email}}</span></p>
+    <p><span>{{user.phone}}</span></p>
+  </div>
+  <div class="about">
+    <h4>About Me</h4>
+    <p>
+      {{ aboutYouData }}
+    </p>
+  </div>
+</div>
+<div *ngIf="savedSuccessful">
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+    The information saved <strong>Successful!</strong>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+</div>
+<div class="profile-form-section">
+  <form [formGroup]="formRegister" (ngSubmit)="save()">
+    <div class="form-profile">
+      <h4>Personal Information</h4>
+      <div class="form-group">
+        <label for="exampleInputEmail1">First Name</label>
+        <input type="name" formControlName="firstName" class="form-control" id="exampleInputfisrtname1"
+          aria-describedby="nameHelp">
+          <span class="field-validation-valid" data-valmsg-for="strUserName" *ngIf="firstNameInvalid" data-valmsg-replace="true">Required</span>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Last Name</label>
+        <input type="name" formControlName="lastName" class="form-control" id="exampleInputlastname1"
+          aria-describedby="nameHelp">
+        <span class="field-validation-valid" data-valmsg-for="strUserName" *ngIf="lastNameInvalid" data-valmsg-replace="true">Required</span>
+      </div>
+      <div>
+        <div class="form-group divide-form">
+          <label for="birthId">Date of Birth</label>
+          <input type="date" formControlName="date" class="form-control" id="birthId" aria-describedby="nameHelp">
+        </div>
+
+        <div class="form-group divide-form">
+          <label for="genderId">Gender</label>
+          <br>
+          <!-- <input type="name" formControlName="gender" class="form-control" id="genderId" aria-describedby="nameHelp"> -->
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" formControlName="gender" type="radio" name="gender" id="exampleRadios1"
+              value="Male" checked>
+            <label class="form-check-label" for="exampleRadios1">
+              Male
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" formControlName="gender" type="radio" name="gender" id="exampleRadios2"
+              value="Female">
+            <label class="form-check-label" for="exampleRadios2">
+              Female
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="heightId">Height</label>
+        <input type="name" formControlName="height" class="form-control" id="heightId" aria-describedby="nameHelp">
+      </div>
+      <div class="form-group">
+        <label for="weight">Weight</label>
+        <input type="name" formControlName="weight" class="form-control" id="weight" aria-describedby="nameHelp">
+      </div>
+      <div class="form-group">
+        <label for="aboutId">About you</label>
+        <textarea type="name" formControlName="aboutYou" class="form-control" id="aboutId"
+          aria-describedby="nameHelp"></textarea>
+      </div>
+    </div>
+
+    <div class="form-profile">
+      <h4>Contact Information</h4>
+      <div class="form-group">
+        <label for="addressId">Address</label>
+        <input type="email" formControlName="address" class="form-control" id="addressId" aria-describedby="emailHelp">
+      </div>
+      <div class="form-group">
+        <label for="countryId">Country</label>
+        <input type="email" class="form-control" id="countryId" aria-describedby="emailHelp">
+      </div>
+      <div class="form-group">
+        <label for="stateId">State</label>
+        <input type="email" class="form-control" id="stateId" aria-describedby="emailHelp">
+      </div>
+      <div class="form-group">
+        <label for="cityId">City</label>
+        <input type="email" class="form-control" id="cityId" aria-describedby="emailHelp">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1"
+          aria-describedby="emailHelp">
+          <span class="field-validation-valid" data-valmsg-for="strUserName" *ngIf="emailInvalid" data-valmsg-replace="true">Required</span>
+      </div>
+      <div class="form-group">
+        <label for="extInputEmail1">Phone Number</label>
+        <input type="text" formControlName="ext" class="form-control" id="extInputEmail1" aria-describedby="extHelp">
+        <span class="field-validation-valid" data-valmsg-for="strUserName" *ngIf="extInvalid" data-valmsg-replace="true">Required</span>
+      </div>
+      <div class="form-group">
+        <input type="text" formControlName="phone" class="form-control" id="exampleInputphone1"
+          aria-describedby="phoneHelp">
+          <span class="field-validation-valid" data-valmsg-for="strUserName" *ngIf="phoneInvalid" data-valmsg-replace="true">Required</span>
+      </div>
+    </div>
+    <div class="buttons-form">
+
+      <button type="submit" class="btn btn-primary">Update</button>
+    </div>
+
+  </form>
+</div>

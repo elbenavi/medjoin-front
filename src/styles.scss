@@ -1,1 +1,5448 @@
-/* You can add global styles to this file, and also import other style files */
+$bluesky: #01baf2;
+$bluesky2: #7ad6f5;
+$red: #ec525e;
+$gray: #f1f1f1;
+$darkgrey: #999999;
+
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    background: #fff;
+}
+
+body,
+input,
+textarea {
+    font-family: "Roboto", sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 21px;
+    color: #727272;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+    color: #3c3c3c;
+    margin: 0;
+    padding: 0;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+    color: inherit;
+}
+
+h1 {
+    font-size: 30px;
+    line-height: 32px;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-size: 23px;
+    line-height: 25px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 20px;
+    line-height: 22px;
+    margin-bottom: 15px;
+}
+
+h4 {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 10px;
+}
+
+h5 {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 5px;
+}
+
+h6 {
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 5px;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    margin: 0 0 20px 0;
+    list-style-position: inside;
+}
+
+ul {
+    list-style: none;
+}
+
+ol {
+    list-style-type: decimal;
+}
+
+ol ol {
+    list-style: upper-alpha;
+}
+
+ol ol ol {
+    list-style: lower-roman;
+}
+
+ol ol ol ol {
+    list-style: lower-alpha;
+}
+
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+    margin-bottom: 0;
+}
+
+strong {
+    font-weight: normal;
+}
+
+cite,
+em,
+i {
+    font-style: italic;
+}
+
+a {
+    color: #727272;
+    text-decoration: none;
+    -webkit-transition: all 200ms ease-in;
+    -o-transition: all 200ms ease-in;
+    -moz-transition: all 200ms ease-in;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #0193de;
+}
+
+.clearfix:before,
+.clearfix:after,
+.container:before,
+.container:after,
+.row:before,
+.row:after {
+    display: table;
+    content: " ";
+}
+
+.clearfix:after,
+.container:after,
+.row:after {
+    clear: both;
+}
+
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.col-lg-1,
+.col-lg-2,
+.col-lg-3,
+.col-lg-4,
+.col-lg-5,
+.col-lg-6,
+.col-lg-7,
+.col-lg-8,
+.col-lg-9,
+.col-lg-10,
+.col-lg-11,
+.col-lg-12 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    float: left;
+}
+
+.col-lg-12 {
+    width: 100%;
+}
+
+.col-lg-11 {
+    width: 91.66666666666666%;
+}
+
+.col-lg-10 {
+    width: 83.33333333333334%;
+}
+
+.col-lg-9 {
+    width: 75%;
+}
+
+.col-lg-8 {
+    width: 66.66666666666666%;
+}
+
+.col-lg-7 {
+    width: 58.333333333333336%;
+}
+
+.col-lg-6 {
+    width: 50%;
+}
+
+.col-lg-5 {
+    width: 41.66666666666667%;
+}
+
+.col-lg-4 {
+    width: 33.33333333333333%;
+}
+
+.col-lg-3 {
+    width: 25%;
+}
+
+.col-lg-2 {
+    width: 16.666666666666664%;
+}
+
+.col-lg-1 {
+    width: 8.333333333333332%;
+}
+
+.container {
+    width: 1158px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.header {
+    background: #fff;
+    padding: 5px 0 4px;
+    border-bottom: 1px solid #eb525d;
+}
+
+.video-consultation {
+    padding-top: 3px;
+    text-align: right;
+}
+
+.video-consultation a {
+    font-size: 14px;
+    color: #fff;
+    line-height: 36px;
+    font-weight: 400;
+    padding: 0 18px;
+    border-radius: 99px;
+    background: #eb525d;
+    text-transform: uppercase;
+    height: 35px;
+    margin: 0 0 0 4px;
+    display: inline-block;
+}
+
+.video-consultation a:hover {
+    background: #00baf0;
+}
+
+.video-consultation a.signup-btn {
+    background: #00baf0;
+}
+
+.video-consultation a.signup-btn:hover {
+    background: #eb525d;
+}
+
+.main-menu {
+    float: left;
+    width: 100%;
+}
+
+.menu {
+    float: right;
+    padding: 20px 0 0;
+    margin: 0;
+}
+
+.menu li {
+    float: left;
+    padding: 0 14px;
+}
+
+.menu li a {
+    font-size: 16px;
+    color: #6b686a;
+    line-height: 20px;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+    display: block;
+    transition: all 0.4s ease 0s;
+    -ms-transition: all 0.4s ease 0s;
+    -webkit-transition: all 0.4s ease 0s;
+}
+
+.menu li a:hover,
+.menu li a.active {
+    color: #00baf0;
+}
+
+.submenu {
+    // background-color: $bluesky;
+    // color: white;
+    display: inline-block;
+    border-radius: 25px;
+    border: 1px solid $bluesky;
+    padding: 20px;
+    width: 30%;
+    height: 110px;
+    margin: 10px;
+    margin-bottom: 50px;
+}
+
+.submenu2 {
+    background-color: $bluesky;
+    color: white;
+    display: inline-block;
+    border-radius: 25px;
+    border: 1px solid $bluesky;
+    padding: 20px;
+    width: 30%;
+    height: 110px;
+    margin: 10px;
+    margin-bottom: 50px;
+    h4 {
+        text-align: center;
+        color: white;
+    }
+}
+
+.submenu h4 {
+    text-align: center;
+    color: $bluesky;
+}
+
+// .submenu:hover {
+//     background-color: $bluesky;
+//     color: white;
+//     cursor: pointer;
+//     h4 {
+//         color: white;
+//     }
+// }
+
+.submenuuser {
+    display: inline-block;
+    border-radius: 25px;
+    background-color: $bluesky;
+    padding: 20px;
+    width: 22%;
+    height: 65px;
+    margin: 10px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    cursor: pointer;
+    h4 {
+        color: white;
+        text-align: center;
+    }
+}
+
+.profile {
+    display: inline-block;
+    margin: 0;
+    margin-bottom: 40px;
+    width: 48%;
+    margin-left: 2%;
+    .imageprofile {
+        display: inline-block;
+        img {
+            width: 150px;
+            height: 150px;
+            border-radius: 25px;
+            margin: 0;
+            margin-right: 5px;
+        }
+    }
+
+    .info {
+        display: inline-block;
+        vertical-align: top;
+        width: 65%;
+        h4 {
+            color: $bluesky;
+            text-transform: uppercase;
+        }
+
+        h5 {
+            text-transform: uppercase;
+            color: $bluesky2;
+            width: 80%;
+        }
+        span {
+            color: $red;
+            display: block;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .btn-prifile {
+            margin-right: 5px;
+        }
+    }
+}
+.field-validation-valid {
+    display: inline-block;
+    color: $red;
+}
+
+.list-appointment {
+    border: 1px solid #ebebeb;
+    padding: 10px;
+    margin-bottom: 15px;
+    .footer {
+        background-color: #f1f1f1;
+        display: block;
+        width: 100%;
+    }
+    .image {
+        vertical-align: top;
+        display: inline-block;
+        margin-right: 20px;
+        img {
+            width: 150px;
+            height: 150px;
+        }
+    }
+    .info-doctor {
+        display: inline-block;
+        width: 35%;
+        h4 {
+            color: $bluesky;
+        }
+        h5 {
+            color: $bluesky2;
+            width: 90%;
+        }
+        p {
+            width: 90%;
+        }
+        span {
+            color: $red;
+        }
+    }
+    .medical-report {
+        vertical-align: top;
+        margin-right: 15px;
+        display: inline-block;
+        width: 20%;
+        p {
+            color: $bluesky;
+        }
+    }
+    .schedule {
+        vertical-align: top;
+        display: inline-block;
+        width: 20%;
+        span {
+            color: $bluesky;
+        }
+    }
+}
+
+.form-upload {
+    border: 1px solid $bluesky;
+    border-radius: 25px;
+    padding: 15px;
+    margin-bottom: 20px;
+    .input-group {
+        label {
+            margin-right: 10px;
+        }
+        input {
+            margin-right: 10px;
+        }
+    }
+}
+.profile-section {
+    border: 1px solid $bluesky;
+    margin-bottom: 20px;
+    width: 100%;
+    border-radius: 25px;
+    padding: 15px;
+    .image {
+        vertical-align: top;
+        display: inline-block;
+        margin-right: 20px;
+        img {
+            width: 150px;
+            height: 150px;
+            border-radius: 25px;
+        }
+        input {
+            display: none;
+        }
+        label {
+            position: relative;
+            bottom: -60px;
+            right: 30px;
+            img {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+    .info {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 30%;
+        h4 {
+            color: $bluesky;
+        }
+        span {
+            color: $darkgrey;
+        }
+    }
+    .about {
+        display: inline-block;
+        vertical-align: top;
+        width: 30%;
+        h4 {
+            color: $bluesky;
+        }
+    }
+}
+
+.profile-form-section {
+    border: 1px solid $gray;
+    padding: 20px;
+    padding-left: 50px;
+    .form-profile {
+        display: inline-block;
+        vertical-align: top;
+        width: 45%;
+        margin-right: 50px;
+        h4 {
+            color: $bluesky;
+            border-bottom: 1px solid $bluesky;
+            padding-bottom: 5px;
+            margin-bottom: 30px;
+        }
+    }
+    .divide-form {
+        display: inline-block;
+        vertical-align: top;
+        width: 45%;
+        margin-right: 5%;
+    }
+    .buttons-form {
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+}
+
+.profile-modal {
+    margin: 0;
+    margin-bottom: 40px;
+    width: 100%;
+    margin-left: 2%;
+
+    .imageprofile {
+        display: inline-block;
+        img {
+            width: 150px;
+            height: 150px;
+            border-radius: 25px;
+            margin: 0;
+            margin-right: 5px;
+        }
+    }
+
+    .info {
+        display: inline-block;
+        vertical-align: top;
+        width: 65%;
+        h4 {
+            color: $bluesky;
+            text-transform: uppercase;
+        }
+
+        h5 {
+            text-transform: uppercase;
+            color: $bluesky2;
+            width: 80%;
+        }
+        span {
+            color: $red;
+            display: block;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .btn-prifile {
+            margin-right: 5px;
+        }
+    }
+}
+.schedule {
+    width: 50%;
+    vertical-align: top;
+    display: inline-block;
+    .day {
+        color: $bluesky;
+        margin-right: 10px;
+        font-size: 1.3em;
+        width: 40%;
+        display: inline-block;
+    }
+    .time {
+        font-size: 1.3em;
+    }
+}
+
+.charges {
+    width: 50%;
+    display: inline-block;
+    span {
+        color: $bluesky;
+        font-size: 1.1em;
+    }
+}
+
+.book-registration-column {
+    display: inline-block;
+    border: 1px solid $bluesky;
+    width: 30%;
+    border-radius: 25px;
+    padding: 20px;
+    margin-right: 3%;
+    vertical-align: top;
+    h5 {
+        color: $bluesky;
+    }
+    .schedule {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .day {
+        color: $bluesky;
+        margin-right: 10px;
+        font-size: 1em;
+        width: 40%;
+        display: inline-block;
+    }
+    .time {
+        font-size: 1em;
+    }
+    .charges {
+        width: 100%;
+    }
+    span {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
+.book-registration-form {
+    display: inline-block;
+    border: 1px solid $bluesky;
+    width: 63%;
+    border-radius: 25px;
+    vertical-align: top;
+    padding: 20px;
+}
+
+.loginheader-panel {
+    text-align: right;
+    padding-top: 0;
+    padding-bottom: 4px;
+    margin-top: -5px;
+    padding-right: 5px;
+    position: relative;
+}
+
+.loginheader-panel .userlogin-name {
+    background: url(/../../assets/images/bottom-arrow.png) no-repeat 92% center #eb525d;
+    display: inline-block;
+    height: 39px;
+    font-size: 14px;
+    color: #fff;
+    line-height: 40px;
+    font-weight: 400;
+    padding: 0 37px 0 16px;
+    margin: 0;
+    border-radius: 0 0 6px 6px;
+}
+
+.loginheader-panel .userlogin-name:hover {
+    background-color: #333;
+}
+
+.whymedjoin {
+    padding: 32px 0 70px 0;
+}
+
+.whymedjoin h2 {
+    font-size: 36px;
+    color: #17abd6;
+    line-height: 42px;
+    font-weight: 300;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.whymedjoin h2:after {
+    content: "";
+    border-bottom: 1px solid #3499be;
+    display: block;
+    width: 160px;
+    margin: 14px auto 0;
+}
+
+.whymedjoin p {
+    font-size: 24px;
+    color: #242424;
+    line-height: 28px;
+    font-weight: 300;
+    padding: 20px 0 10px;
+    margin: 0;
+    text-align: center;
+}
+
+.whymedjoin-list {
+    padding: 35px 0 0;
+    margin: 0;
+}
+
+.whymedjoin-list li {
+    background: url(/../../assets/images/whymedjoin-list.png) no-repeat left 2px;
+    font-size: 20px;
+    line-height: 24px;
+    color: #6f6f6f;
+    font-weight: 300;
+    padding: 0 0 22px 44px;
+    margin: 0;
+}
+
+.whymedjoin-img {
+    text-align: right;
+}
+
+.whymedjoin-img img {
+    vertical-align: top;
+}
+
+.whymedjoin-startnow {
+    background: #eb525d;
+    font-size: 16px;
+    color: #fff;
+    line-height: 66px;
+    border-radius: 90px;
+    font-weight: 300;
+    text-transform: uppercase;
+    height: 66px;
+    display: inline-block;
+    padding: 0 34px;
+    margin: 10px 0 0;
+    transition: all 0.4s ease 0s;
+    -ms-transition: all 0.4s ease 0s;
+    -webkit-transition: all 0.4s ease 0s;
+}
+
+.whymedjoin-startnow:hover {
+    background: #00baf0;
+    color: #fff;
+}
+
+.step-appointment {
+    background: #f15b5a;
+    border: 3px solid #fff;
+    border-radius: 99px;
+    display: table;
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 17px 30px;
+    position: relative;
+    text-align: center;
+    top: -33px;
+}
+
+.step-appointment p {
+    color: #fff;
+    font-size: 27px;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.stepappointment {
+    padding: 0 0 52px;
+}
+
+.stepappointment .stepappointment-img {
+    background: #eb525d;
+    height: 91px;
+    width: 91px;
+    border-radius: 100%;
+    overflow: hidden;
+    margin: 0 auto 20px;
+    text-align: center;
+}
+
+.stepappointment-img img {
+    position: relative;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    top: 50%;
+}
+
+.stepappointment h3 {
+    font-size: 24px;
+    color: #fff;
+    line-height: 28px;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.stepappointment h3:after {
+    content: "";
+    border-bottom: 1px solid #fff;
+    display: block;
+    width: 121px;
+    margin: 20px auto 0;
+}
+
+.stepappointment p {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 300;
+    color: #fff;
+    padding: 28px 15px 20px;
+    margin: 0;
+    text-align: center;
+}
+
+.doctorplatform-panel {
+    padding: 58px 0 58px;
+}
+
+.doctorplatform-panel h2 {
+    font-size: 36px;
+    color: #17abd6;
+    line-height: 40px;
+    font-weight: 300;
+    padding: 0;
+    margin: 0 0 48px;
+    text-align: center;
+}
+
+.doctorplatform-panel h2:after {
+    content: "";
+    border-bottom: 1px solid #3499be;
+    display: block;
+    width: 160px;
+    margin: 19px auto 0;
+}
+
+.doctorplatform h3 {
+    font-size: 24px;
+    color: #242424;
+    line-height: 28px;
+    font-weight: 400;
+    padding: 0 0 20px;
+    margin: 0;
+    text-align: center;
+}
+
+.doctorplatform p {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+    color: #6f6f6f;
+    padding: 0 15px 25px;
+    margin: 0;
+    text-align: center;
+}
+
+.areDoctor-left {
+    text-align: center;
+    padding: 68px 0 0;
+}
+
+.areDoctor-panel h2 {
+    font-size: 36px;
+    color: #fff;
+    line-height: 42px;
+    font-weight: 300;
+    padding: 0 0 30px;
+    margin: 0;
+    text-align: center;
+}
+
+.whymedjoin-signup {
+    background: #eb525d;
+    font-size: 16px;
+    color: #fff;
+    line-height: 66px;
+    border-radius: 90px;
+    font-weight: 300;
+    text-transform: uppercase;
+    height: 66px;
+    display: inline-block;
+    padding: 0 34px;
+    margin: 0 0 0;
+    transition: all 0.4s ease 0s;
+    -ms-transition: all 0.4s ease 0s;
+    -webkit-transition: all 0.4s ease 0s;
+}
+
+.whymedjoin-signup:hover {
+    background: #00baf0;
+    color: #fff;
+}
+
+.areDoctor-list {
+    margin: 0;
+    padding: 35px 0 10px;
+}
+
+.areDoctor-list li {
+    background: url(/../../assets/images/whymedjoin-list2.png) no-repeat left 2px;
+    font-size: 16px;
+    color: #fff;
+    line-height: 20px;
+    font-weight: 400;
+    padding: 0 0 32px 42px;
+    margin: 0;
+}
+
+.fat-footer {
+    background: #252e4c;
+    padding: 37px 0;
+}
+
+.footer-detail h2 {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 300;
+    padding: 0 0 22px;
+    color: #fff;
+    margin: 0;
+}
+
+.footer-detail h2 strong {
+    font-weight: 500;
+}
+
+.footerabout p {
+    font-size: 14px;
+    color: #bfc0c1;
+    line-height: 24px;
+    font-weight: 400;
+    padding: 8px 38px 6px 0;
+    margin: 0;
+}
+
+.quicklink ul {
+    padding: 0;
+    margin: 0;
+}
+
+.quicklink ul li {
+    font-size: 14px;
+    color: #fff;
+    line-height: 20px;
+    font-weight: 400;
+    padding: 0 0 20px 38px;
+    margin: 0;
+    background: url(/../../assets/images/whymedjoin-list3.png) no-repeat left 2px;
+}
+
+.quicklink ul li a {
+    color: #fff;
+}
+
+.quicklink ul li a:hover {
+    color: #eb525d;
+}
+
+.quickcontact p {
+    font-size: 16px;
+    color: #fff;
+    line-height: 22px;
+    font-weight: 300;
+    padding: 15px 0 38px 63px;
+    margin: 0;
+}
+
+.quickcontact p a {
+    color: #fff;
+}
+
+.quickcontact p.footer-id {
+    background: url(/../../assets/images/email-icon.png) no-repeat left top;
+}
+
+.quickcontact p.footer-contact {
+    background: url(/../../assets/images/phone-icon.png) no-repeat left top;
+}
+
+.quickcontact p.footerform {
+    background: url(/../../assets/images/form-icon.png) no-repeat left top;
+}
+
+.footer-bottom {
+    padding: 10px 10px;
+}
+
+.footer-copyright p {
+    font-size: 16px;
+    color: #5d5d5d;
+    line-height: 22px;
+    font-weight: 300;
+    padding: 24px 0 0;
+    margin: 0;
+    text-align: center;
+}
+
+.social-link {
+    padding: 10px 0 0;
+    margin: 0;
+    text-align: right;
+}
+
+.social-link li {
+    display: inline-block;
+}
+
+.social-link li a {
+    display: block;
+    width: 44px;
+    height: 44px;
+    background: url(/../../assets/images/social-link.png) no-repeat left top;
+    transition: all 0.5s ease 0s;
+    -webkit-transition: all 0.5s ease 0s;
+    -ms-transition: all 0.5s ease 0s;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+}
+
+.social-link li a:hover {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+}
+
+.social-link li.facebook a {
+    background-position: 0 0;
+}
+
+.social-link li.twitter a {
+    background-position: -49px 0;
+}
+
+.social-link li.linkin a {
+    background-position: -96px 0;
+}
+
+.social-link li.youtube a {
+    background-position: -144px 0;
+}
+
+.social-link li.googlep a {
+    background-position: -193px 0;
+}
+
+.innerpageTitle-panel {
+    padding: 50px 0 48px;
+}
+
+.innerpageTitle-panel h2 {
+    font-size: 30px;
+    color: #02a3d1;
+    line-height: 34px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 0 0 3px;
+    margin: 0;
+}
+
+.innerpageTitle-panel p {
+    font-size: 16px;
+    color: #6b686a;
+    line-height: 20px;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+}
+
+.consultationtitle {
+    float: left;
+    width: 100%;
+    padding: 12px 12px;
+    border: 1px solid #00baf0;
+    border-radius: 20px;
+    min-height: 90px;
+}
+
+.consultation-head {
+    padding: 20px 0;
+}
+
+.consultationtitle .consultationtitle-img {
+    width: 42px;
+    height: 42px;
+    background: #eb525d;
+    border-radius: 100%;
+    float: left;
+    font-size: 24px;
+    line-height: 42px;
+    text-align: center;
+    color: #fff;
+    font-weight: 400;
+    margin-top: 12px;
+}
+
+.consultationtitle .consultationtitle-detail {
+    float: left;
+    width: 87%;
+    padding-left: 10px;
+}
+
+.consultationtitle-detail h3 {
+    font-size: 24px;
+    color: #02a3d1;
+    line-height: 28px;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+}
+
+.consultationtitle-detail p {
+    font-size: 14px;
+    color: #6b686a;
+    line-height: 18px;
+    font-weight: 300;
+    padding: 0;
+    margin: 0;
+}
+
+.consultationtitle.selected {
+    background: #00baf0;
+}
+
+.selected .consultationtitle-detail h3 {
+    color: #fff;
+}
+
+.selected .consultationtitle-detail p {
+    color: #fff;
+}
+
+.select-specialist {
+    padding-top: 13px;
+    padding-bottom: 32px;
+}
+
+.select-specialist .specialisation-arrow {
+    position: relative;
+}
+
+.select-specialist .specialisation {
+    width: 100%;
+    background: #fff;
+    border: 1px solid #00baf0;
+    -webkit-appearance: none;
+    height: 50px;
+    border-radius: 20px;
+    font-size: 18px;
+    color: #6e6e6e;
+    line-height: 50px;
+    font-weight: 300;
+    padding: 0 20px;
+    margin: 0;
+    position: relative;
+}
+
+.select-specialist .specialisation-arrow:before {
+    background: url(/../../assets/images/select-arrow.png) no-repeat left center #fff;
+    z-index: 1;
+    content: "";
+    border-radius: 0 20px 20px 0;
+    display: block;
+    height: 48px;
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    width: 37px;
+}
+
+.consultationDoctor-list {
+    padding-bottom: 20px;
+}
+
+.doctorlist {
+    padding-bottom: 53px;
+}
+
+.doctor-img {
+    float: left;
+    width: 33%;
+}
+
+.doctor-detail {
+    float: left;
+    width: 67%;
+    padding-left: 17px;
+}
+
+.doctor-detail h3 {
+    font-size: 18px;
+    color: #00baf0;
+    line-height: 22px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 0 0 3px;
+    margin: 0;
+}
+
+.doctor-detail h4 {
+    font-size: 14px;
+    color: #00baf0;
+    line-height: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 0 0 3px;
+    margin: 0;
+}
+
+.doctor-detail p {
+    font-size: 14px;
+    color: #6b686a;
+    line-height: 18px;
+    font-weight: 300;
+    padding: 0;
+    margin: 0;
+}
+
+.doctor-detail p a {
+    color: #eb525d;
+}
+
+.doctor-detail span {
+    font-size: 14px;
+    color: #eb525d;
+    line-height: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 5px 0 5px;
+    display: block;
+    margin: 0;
+}
+
+.doctor-detail .doctordetail-btn a {
+    font-size: 16px;
+    color: #fff;
+    line-height: 36px;
+    font-weight: 500;
+    background: #eb525d;
+    height: 36px;
+    text-align: center;
+    padding: 0 12px;
+    display: inline-block;
+    margin: 0;
+}
+
+.doctor-detail .doctordetail-btn a:hover {
+    background: #00baf0;
+}
+
+.doctor-detail .doctordetail-btn a.bookVideo-btn {
+    background: #00baf0;
+}
+
+.doctor-detail .doctordetail-btn a.bookVideo-btn:hover {
+    background: #eb525d;
+}
+
+.loadmore-block {
+    border-top: 1px solid #d3d3d3;
+    padding-top: 13px;
+    padding-bottom: 18px;
+}
+
+.loadmore-block p {
+    font-size: 14px;
+    color: #6b686a;
+    line-height: 18px;
+    font-weight: 300;
+    padding: 5px 0 0;
+    margin: 0;
+    float: left;
+}
+
+.loadmore-block p strong {
+    font-weight: 600;
+}
+
+.loadmore-block .loadmore-btn {
+    background: url("/../../assets/images/doctor/load-more.jpg") no-repeat 88% center #f15b5a;
+    height: 30px;
+    padding: 0 41px 0 15px;
+    font-size: 14px;
+    line-height: 32px;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 20px;
+    float: right;
+}
+
+.loadmore-block .loadmore-btn:hover {
+    background-color: #00baf0;
+}
+
+.videoconsultation-main {
+    padding-bottom: 55px;
+}
+
+.videoconsultation-profile {
+    border: 1px solid #00baf0;
+    border-radius: 20px;
+    padding: 15px 18px 15px 24px;
+}
+
+.consultProfile-detail {
+    padding-top: 6px;
+}
+
+.consultProfile-detail h3 {
+    font-size: 18px;
+    color: #00baf0;
+    line-height: 22px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 0 0 3px;
+    margin: 0;
+}
+
+.consultProfile-detail h4 {
+    font-size: 14px;
+    color: #00baf0;
+    line-height: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 0 0 3px;
+    margin: 0;
+}
+
+.consultProfile-detail p {
+    font-size: 14px;
+    color: #6b686a;
+    line-height: 18px;
+    font-weight: 300;
+    padding: 0 0 5px;
+    margin: 0;
+}
+
+.videoconsultation-profile h2 {
+    font-size: 16px;
+    color: #333333;
+    line-height: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 0 0 3px;
+    margin: 0;
+}
+
+.profile-timingSolt {
+    padding-top: 18px;
+}
+
+.profile-timingSolt .slots-list {
+    padding: 3px 0 25px;
+    margin: 0;
+}
+
+.profile-timingSolt .slots-list li {
+    font-size: 14px;
+    color: #6b686a;
+    line-height: 20px;
+    font-weight: 300;
+    padding: 0 0 5px;
+    margin: 0;
+}
+
+.profile-timingSolt .slots-list li span {
+    color: #00baf0;
+    width: 95px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.profile-timingSolt .slots-list li span:nth-child(2) {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.profile-timingSolt .slots-list li span.slots-time {
+    color: #6b686a;
+    width: auto;
+}
+
+.consult-charges p {
+    font-size: 14px;
+    color: #6b686a;
+    line-height: 20px;
+    font-weight: 300;
+    padding: 0 0 25px;
+    margin: 0;
+}
+
+.consult-charges p strong {
+    color: #00baf0;
+    font-weight: 600;
+}
+
+.boockAppointment {
+    border: 1px solid #00baf0;
+    border-radius: 20px;
+    padding: 15px 18px 15px 24px;
+    min-height: 745px;
+}
+
+.boockAppointment p {
+    font-size: 14px;
+    color: #00baf0;
+    line-height: 20px;
+    font-weight: 400;
+    padding: 5px 0 25px;
+    margin: 0;
+}
+
+.boockAppointment-form .input-field label {
+    font-size: 14px;
+    color: #6b686a;
+    line-height: 34px;
+    font-weight: 300;
+    padding: 0 10px 0 0;
+    text-align: right;
+    margin: 0;
+    width: 26%;
+    float: left;
+}
+
+.boockAppointment-form .input-field p {
+    padding: 0px;
+}
+
+.boockAppointment-form .red {
+    color: #eb525d;
+}
+
+.boockAppointment-form .input-field {
+    width: 100%;
+    float: left;
+    padding-bottom: 18px;
+}
+
+.boockAppointment-form .input-field input {
+    height: 35px;
+    border: 1px solid #d4d4d4;
+    border-radius: 4px;
+    background: #fff;
+    -webkit-appearance: none;
+    width: 50%;
+    padding: 0 15px;
+    line-height: 35px;
+    font-size: 14px;
+    color: #6b686a;
+    font-weight: 400;
+    /*float: left;*/
+}
+
+.boockAppointment-form .input-field input.date-icon {
+    background: url(/../../assets/images/date-icon.png) no-repeat 97% center;
+}
+
+.input-field input.timepicker,
+.boockAppointment-form .input-field input.timepicker {
+    background: url(/../../assets/images/time-icon.png) no-repeat 96% center !important;
+}
+
+.boockAppointment-form .input-field textarea {
+    height: 90px;
+    border: 1px solid #d4d4d4;
+    border-radius: 4px;
+    background: #fff;
+    -webkit-appearance: none;
+    width: 37%;
+    padding: 0 15px;
+    line-height: 35px;
+    font-size: 14px;
+    color: #6b686a;
+    font-weight: 400;
+    float: left;
+}
+
+.boockAppointment-form .input-field input.input-text {
+    width: 37%;
+}
+
+.boockAppointment-form .input-field .input-phoneno {
+    width: 37%;
+    float: left;
+}
+
+.boockAppointment-form .input-field .input-phoneno .phoneCode {
+    width: 30%;
+    margin-right: 3%;
+}
+
+.boockAppointment-form .input-field .input-phoneno .phoneNumber {
+    width: 67%;
+}
+
+.boockAppointment-form .input-field input.inputfile {
+    padding: 5px 10px;
+    width: 37%;
+}
+
+.boockAppointment-form .input-field .inputfile {
+    height: 35px;
+    border: 1px solid #d4d4d4;
+    border-radius: 4px;
+    background: #fff;
+    width: 50%;
+    padding: 0 15px;
+    line-height: 35px;
+    font-size: 14px;
+    color: #6b686a;
+    font-weight: 400;
+    float: left;
+    width: 37%;
+}
+
+.boockAppointment-form .input-field .inputfile .browser {
+    background: #ececec;
+    display: inline-block;
+    border: 1px solid #acacac;
+    font-size: 14px;
+    color: #000;
+    padding: 0 9px;
+    vertical-align: top;
+    margin-top: 5px;
+    line-height: 20px;
+}
+
+.appointmentform-btn {
+    width: 74%;
+    padding-top: 10px;
+    float: right;
+}
+
+.appointmentform-btn .booknow-btn {
+    font-size: 14px;
+    color: #fff;
+    line-height: 35px;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+    background: #eb525d;
+    border: none;
+    border-radius: 15px;
+    height: 35px;
+    width: 117px;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+}
+
+.appointmentform-btn .booknow-btn:hover {
+    background: #00baf0;
+}
+
+.changeDoctor-btn .doctorc-btn {
+    font-size: 14px;
+    color: #fff;
+    line-height: 35px;
+    font-weight: 400;
+    padding: 0 25px;
+    margin: 0;
+    background: #00baf0;
+    display: inline-block;
+    border: none;
+    border-radius: 15px;
+    height: 35px;
+    text-align: center;
+}
+
+.changeDoctor-btn .doctorc-btn:hover {
+    background: #eb525d;
+}
+
+.boockAppointment-form h4 {
+    font-size: 14px;
+    color: #575757;
+    line-height: 20px;
+    font-weight: 600;
+    padding: 0 0 15px;
+    margin: 0;
+    float: left;
+    width: 100%;
+}
+
+.boockAppointment-form .report-document {
+    float: left;
+    width: 74%;
+}
+
+.boockAppointment-form .input-field .report-document .input-text {
+    width: 50%;
+}
+
+.boockAppointment-form .input-field .report-document .input-upload {
+    font-size: 14px;
+    color: #fff;
+    line-height: 35px;
+    -webkit-appearance: none;
+    font-weight: 400;
+    padding: 0;
+    margin: 0 0 0 16px;
+    width: 120px;
+    background: #00baf0;
+    display: inline-block;
+    border: none;
+    border-radius: 15px;
+    height: 35px;
+    text-align: center;
+}
+
+.boockAppointment-form .input-field .report-document .input-upload:hover {
+    background: #eb525d;
+}
+
+.reporttable-panel {
+    float: right;
+    width: 74%;
+    padding-top: 10px;
+}
+
+.reporttable-panel .report-table {
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    table-layout: fixed;
+}
+
+.report-table tr th {
+    font-size: 14px;
+    color: #575757;
+    line-height: 18px;
+    background: #f1f1f1;
+    font-weight: 600;
+    padding: 9px 5px 10px 15px;
+}
+
+.report-table tr td {
+    font-size: 14px;
+    color: #6a6a6a;
+    line-height: 18px;
+    background: #fff;
+    font-weight: 400;
+    padding: 5px 5px 6px 15px;
+}
+
+.report-table tr td.filename {
+    color: #00baf0;
+}
+
+.bookinginformation {
+    border: 1px solid #00baf0;
+    border-radius: 20px;
+    padding: 15px 18px 15px 24px;
+    min-height: 745px;
+}
+
+.bookinginformation h2 {
+    font-size: 16px;
+    color: #333333;
+    line-height: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 5px 0 10px;
+    margin: 0;
+}
+
+.bookinginformation span {
+    font-size: 14px;
+    color: #00baf0;
+    line-height: 20px;
+    font-weight: 300;
+    padding: 0 0 1px;
+    display: block;
+    margin: 0;
+}
+
+.bookinginformation p {
+    font-size: 14px;
+    color: #6b686a;
+    line-height: 18px;
+    font-weight: 300;
+    padding: 0 0 16px;
+    margin: 0;
+}
+
+.bookinginformation .charge-detail a {
+    font-size: 14px;
+    color: #fff;
+    line-height: 35px;
+    font-weight: 400;
+    padding: 0 25px;
+    margin: 10px 0 0;
+    background: #00baf0;
+    display: inline-block;
+    border: none;
+    border-radius: 15px;
+    height: 35px;
+    text-align: center;
+}
+
+.bookinginformation .charge-detail a:hover {
+    background: #eb525d;
+}
+
+.payonline-main {
+    padding-bottom: 55px;
+}
+
+.creditcardinofrmation {
+    border: 1px solid #00baf0;
+    border-radius: 20px;
+    padding: 15px 15px 15px 24px;
+    min-height: 745px;
+}
+
+.net-banking {
+    padding-bottom: 10px;
+}
+
+.net-banking p {
+    font-size: 14px;
+    color: #6b686a;
+    line-height: 18px;
+    font-weight: 300;
+    padding: 5px 0 10px;
+    margin: 0;
+}
+
+.creaditcard-img {
+    text-align: right;
+}
+
+.card-radio .radio-block {
+    float: left;
+    width: 30%;
+}
+
+.card-radio .radio-block label {
+    font-size: 14px;
+    color: #6b686a;
+    line-height: 18px;
+    font-weight: 300;
+    padding: 0;
+    margin: 0;
+}
+
+.creditcard {
+    padding-top: 14px;
+}
+
+.creditcard h2 {
+    font-size: 16px;
+    color: #333333;
+    line-height: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 0 0 15px;
+    margin: 0;
+}
+
+.creditcard-form .input-field {
+    padding-bottom: 16px;
+}
+
+.creditcard-form .input-field label {
+    font-size: 14px;
+    color: #6b686a;
+    line-height: 20px;
+    font-weight: 300;
+    padding: 0 0 2px;
+    margin: 0;
+    display: block;
+}
+
+.creditcard-form .input-field label .red {
+    color: #eb525d;
+}
+
+.creditcard-form .input-field input {
+    height: 35px;
+    border: 1px solid #d4d4d4;
+    border-radius: 4px;
+    -webkit-appearance: none;
+    background: #fff;
+    width: 100%;
+    padding: 0 15px;
+    line-height: 35px;
+    font-size: 14px;
+    color: #6b686a;
+    font-weight: 400;
+}
+
+.creditcard-form .select-field {
+    margin: 0 -5px;
+}
+
+.creditcard-form .select-field .expiry-select {
+    padding: 0 5px;
+}
+
+.creditcard-form .select-field .expiry-select select {
+    height: 35px;
+    border: 1px solid #d4d4d4;
+    -webkit-appearance: none;
+    border-radius: 4px;
+    background: #fff;
+    width: 100%;
+    padding: 0 15px;
+    line-height: 35px;
+    font-size: 14px;
+    color: #6b686a;
+    font-weight: 400;
+}
+
+.ceaditpay-btn .paynow-btn {
+    font-size: 14px;
+    color: #fff;
+    line-height: 35px;
+    font-weight: 400;
+    -webkit-appearance: none;
+    padding: 0;
+    margin: 12px 0 0;
+    background: #eb525d;
+    border: none;
+    border-radius: 15px;
+    height: 35px;
+    width: 117px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.ceaditpay-btn .paynow-btn:hover {
+    background: #00baf0;
+}
+
+.selectDoctor-main,
+#BookVideo,
+.payonline-main {
+    display: none;
+}
+
+.selectDoctor-main.activeLnk,
+#BookVideo.activeLnk,
+.payonline-main.activeLnk {
+    display: block;
+}
+
+.signin-panel {
+    padding-bottom: 60px;
+}
+
+.signinright {
+    padding: 40px 0 0 13px;
+}
+
+.signinright h2 {
+    font-size: 22px;
+    color: #242424;
+    line-height: 26px;
+    font-weight: 300;
+    padding: 25px 0 24px;
+    margin: 0;
+}
+
+.signinright .signinbenefit-list {
+    padding: 0;
+    margin: 0;
+}
+
+.signinright .signinbenefit-list li {
+    background: url(/../../assets/images/whymedjoin-list.png) no-repeat left 3px;
+    padding-left: 45px;
+    padding-bottom: 23px;
+    font-size: 20px;
+    color: #6f6f6f;
+    font-weight: 300;
+    line-height: 24px;
+}
+
+.signinright p {
+    font-size: 82px;
+    color: #393236;
+    line-height: 88px;
+    font-weight: 500;
+    padding: 0;
+    margin: 0;
+}
+
+.signinright p img {
+    vertical-align: top;
+}
+
+.signin-signup .signup-here {
+    height: 45px;
+    padding: 0 46px 0 40px;
+    font-size: 18px;
+    color: #fff;
+    line-height: 46px;
+    text-transform: uppercase;
+    font-weight: 400;
+    text-align: center;
+    background: url(/../../assets/images/signup-arrow.png) no-repeat 88% center #00baf0;
+    display: inline-block;
+    border-radius: 15px;
+    margin: 30px 0 0;
+}
+
+.signin-signup .signup-here:hover {
+    background-color: #eb525d;
+}
+
+.signin-block {
+    padding: 40px 0 0;
+}
+
+.signin-block h2 {
+    font-size: 30px;
+    color: #3d3d3d;
+    line-height: 36px;
+    font-weight: 400;
+    padding: 0 0 12px;
+    margin: 0;
+    border-bottom: 1px solid #d6d5d6;
+}
+
+.signin-form {
+    padding: 35px 0 0 13px;
+    max-width: 360px;
+}
+
+.signin-form .input-field {
+    padding-bottom: 24px;
+    text-align: right;
+}
+
+.signin-form .input-field label {
+    font-size: 16px;
+    color: #404040;
+    line-height: 20px;
+    font-weight: 400;
+    padding: 0 0 3px;
+    margin: 0;
+    display: block;
+    text-align: left;
+}
+
+.signin-form .input-field input {
+    height: 35px;
+    border: 1px solid #d4d4d4;
+    -webkit-appearance: none;
+    border-radius: 4px;
+    background: #fff;
+    width: 100%;
+    padding: 0 15px;
+    line-height: 35px;
+    font-size: 14px;
+    color: #6b686a;
+    font-weight: 400;
+    text-align: left;
+}
+
+.signin-form .input-field .forgot-pass {
+    font-size: 14px;
+    color: #02a3d1;
+    line-height: 20px;
+    font-weight: 400;
+    padding: 0;
+    margin: 4px 0 0;
+    display: inline-block;
+}
+
+.signinBtn-block .signinBtn {
+    font-size: 14px;
+    color: #fff;
+    line-height: 35px;
+    -webkit-appearance: none;
+    font-weight: 400;
+    padding: 0;
+    margin: 12px 0 0;
+    background: #eb525d;
+    border: none;
+    border-radius: 15px;
+    height: 35px;
+    width: 117px;
+    cursor: pointer;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.signinBtn-block .signinBtn:hover {
+    background: #00baf0;
+}
+
+.signup-panel {
+    padding: 36px 0 50px;
+}
+
+.conference {
+    display: inline-block;
+    margin-top: 30px;
+    width: 100%;
+    height: 500px;
+}
+
+.signup-panel h2 {
+    font-size: 30px;
+    line-height: 34px;
+    color: #3d3d3d;
+    font-weight: 400;
+    padding: 0 0 12px;
+    margin: 0 0 20px;
+    border-bottom: 1px solid #d6d5d6;
+}
+
+.signup-panel h2 span {
+    color: #807f7f;
+}
+
+.signup-form {
+    max-width: 360px;
+    padding-left: 13px;
+}
+
+.signup-form .input-form {
+    padding-bottom: 16px;
+    float: left;
+    width: 100%;
+}
+
+.signup-form .input-select {
+    padding-bottom: 16px;
+    float: left;
+    width: 100%;
+}
+
+.signup-form .input-form.first-name {
+    width: 50%;
+    padding-right: 5px;
+}
+
+.signup-form .input-form.last-name {
+    width: 50%;
+    padding-left: 5px;
+}
+
+.signup-form .input-select select {
+    background: #fff;
+    border: 1px solid #d4d4d4;
+    -webkit-appearance: none;
+    border-radius: 4px;
+    color: #6b686a;
+    font-size: 14px;
+    font-weight: 400;
+    height: 35px;
+    line-height: 35px;
+    margin-top: 0;
+    padding: 0 8px;
+    text-align: left;
+    width: 100%;
+}
+
+.signup-form .input-form label,
+.signup-form .input-select label {
+    font-size: 16px;
+    color: #404040;
+    line-height: 20px;
+    font-weight: 400;
+    padding: 0 0 3px;
+    margin: 0;
+    display: block;
+}
+
+.signup-form label .red {
+    color: #eb525d;
+}
+
+.signup-form .input-form .input-text {
+    height: 35px;
+    border: 1px solid #d4d4d4;
+    border-radius: 4px;
+    background: #fff;
+    width: 100%;
+    padding: 0 15px;
+    -webkit-appearance: none;
+    line-height: 35px;
+    font-size: 14px;
+    color: #6b686a;
+    font-weight: 400;
+    text-align: left;
+}
+
+.signup-form .signup-mobile .signup-mcode {
+    width: 26%;
+    margin-right: 2%;
+    float: left;
+}
+
+.signup-form .signup-mobile .signup-mno {
+    width: 72%;
+    float: left;
+}
+
+.signup-form .signup-mobile span {
+    font-size: 12px;
+    color: #787577;
+    line-height: 20px;
+    display: block;
+    text-align: right;
+    font-weight: 400;
+}
+
+.signup-form .signup-checkbox input {
+    display: inline-block;
+    margin: 0;
+}
+
+.signup-form .signup-checkbox label {
+    display: inline-block;
+    font-size: 12px;
+    vertical-align: top;
+    color: #404040;
+    line-height: 18px;
+    font-weight: 400;
+    padding: 0 0 0 7px;
+    margin: 0;
+}
+
+.signup-form .signup-checkbox label a {
+    color: #2dbae3;
+}
+
+.signup-now .signupnow-btn {
+    font-size: 14px;
+    color: #fff;
+    line-height: 35px;
+    font-weight: 400;
+    padding: 0 30px;
+    -webkit-appearance: none;
+    margin: 5px 0 0;
+    background: #eb525d;
+    border: none;
+    border-radius: 15px;
+    height: 35px;
+    cursor: pointer;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.signup-now .signupnow-btn:hover {
+    background: #00baf0;
+}
+
+.signupdoctor .signupdoctor-btn {
+    font-size: 14px;
+    color: #fff;
+    line-height: 35px;
+    font-weight: 400;
+    padding: 0 30px;
+    -webkit-appearance: none;
+    margin: 5px 0 0;
+    background: #00baf0;
+    border: none;
+    border-radius: 15px;
+    height: 35px;
+    cursor: pointer;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.signupdoctor .signupdoctor-btn:hover {
+    background: #eb525d;
+}
+
+.signup-benefit h3 {
+    font-size: 24px;
+    color: #00baf0;
+    line-height: 28px;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+}
+
+.signup-benefit .benefit-list {
+    padding: 24px 0 0;
+    margin: 0;
+}
+
+.signup-benefit .benefit-list li {
+    background: url(/../../assets/images/whymedjoin-list4.png) no-repeat left 3px;
+    padding-left: 45px;
+    padding-bottom: 18px;
+}
+
+.benefit-list li h4 {
+    font-size: 24px;
+    color: #242424;
+    line-height: 28px;
+    font-weight: 400;
+    padding: 0 0 3px;
+    margin: 0;
+}
+
+.benefit-list li p {
+    font-size: 16px;
+    color: #6f6f6f;
+    line-height: 20px;
+    font-weight: 300;
+    padding: 0 0 16px;
+    margin: 0;
+}
+
+.signupDoctor-panel {
+    padding: 36px 0 50px;
+}
+
+.signupDoctor-panel h2 {
+    font-size: 30px;
+    line-height: 34px;
+    color: #3d3d3d;
+    font-weight: 400;
+    padding: 0 0 12px;
+    margin: 0 0 20px;
+    border-bottom: 1px solid #d6d5d6;
+}
+
+.signupDoctor-panel h2 span {
+    color: #807f7f;
+}
+
+.doctorAccount {
+    max-width: 485px;
+}
+
+.doctorAccount h3 {
+    font-size: 18px;
+    color: #00baf0;
+    line-height: 22px;
+    font-weight: 400;
+    padding: 8px 0 0;
+    margin: 0 0 12px;
+    border-bottom: 1px solid #00baf0;
+}
+
+.doctorAccount h3:after {
+    content: "";
+    display: block;
+    border-bottom: 3px solid #00baf0;
+    width: 184px;
+    padding-top: 6px;
+}
+
+.doctorAccount h4 {
+    font-size: 12px;
+    color: #00baf0;
+    line-height: 22px;
+    font-weight: 400;
+    /*padding: 8px 0 0;
+        margin: 0 0 12px;*/
+}
+
+.signupDoctor-form .row {
+    padding: 0 5px 0 0;
+    margin: 0;
+}
+
+.signupDoctor-form .input-select {
+    padding: 0 5px 20px;
+}
+
+.signupDoctor-form .input-field {
+    padding: 0 5px 20px;
+}
+
+.signupDoctor-form label {
+    font-size: 16px;
+    color: #404040;
+    line-height: 20px;
+    font-weight: 400;
+    padding: 0 0 3px;
+    margin: 0;
+    display: block;
+}
+
+.signupDoctor-form label .red {
+    color: #eb525d;
+}
+
+.signupDoctor-form .input-field .input-text {
+    height: 35px;
+    border: 1px solid #d4d4d4;
+    border-radius: 4px;
+    background: #fff;
+    -webkit-appearance: none;
+    width: 100%;
+    padding: 0 15px;
+    line-height: 35px;
+    font-size: 14px;
+    color: #6b686a;
+    font-weight: 400;
+    text-align: left;
+}
+
+.signupDoctor-form .input-field .input-text.date-icon {
+    background: url(/../../assets/images/date-icon.png) no-repeat 95% center;
+}
+
+.signupDoctor-form .input-field textarea {
+    height: 90px;
+    border: 1px solid #d4d4d4;
+    -webkit-appearance: none;
+    border-radius: 4px;
+    background: #fff;
+    width: 100%;
+    padding: 8px 15px;
+    line-height: 20px;
+    font-size: 14px;
+    color: #6b686a;
+    font-weight: 400;
+    text-align: left;
+}
+
+.signupDoctor-form .input-select select {
+    height: 35px;
+    border: 1px solid #d4d4d4;
+    border-radius: 4px;
+    background: #fff;
+    -webkit-appearance: none;
+    width: 100%;
+    padding: 0 8px;
+    line-height: 35px;
+    font-size: 14px;
+    color: #6b686a;
+    font-weight: 400;
+    text-align: left;
+    margin-top: 22px;
+}
+
+.signupDoctor-form .input-field .input-file {
+    height: 35px;
+    border: 1px solid #d4d4d4;
+    border-radius: 4px;
+    background: #fff;
+    width: 100%;
+    padding: 0 15px;
+    line-height: 35px;
+    font-size: 14px;
+    color: #6b686a;
+    font-weight: 400;
+    text-align: left;
+}
+
+.signupDoctor-form .input-field .input-file .browser {
+    background: #ececec;
+    display: inline-block;
+    border: 1px solid #acacac;
+    font-size: 14px;
+    color: #000;
+    padding: 0 9px;
+    vertical-align: top;
+    margin-top: 5px;
+    line-height: 20px;
+}
+
+.signupDoctor-form .input-select select.country-select {
+    margin-top: 0;
+}
+
+.signupDoctor-form .signup-mobile .signup-mcode {
+    float: left;
+    margin-right: 2%;
+    width: 20%;
+}
+
+.signupDoctor-form .signup-mobile .signup-mno {
+    float: left;
+    width: 78%;
+}
+
+.signupDoctor-form .signup-mobile span {
+    color: #787577;
+    display: block;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: right;
+}
+
+.signupDoctor-form .signup-checkbox input {
+    display: inline-block;
+    margin: 0;
+}
+
+.signupDoctor-form .input-field.signup-checkbox {
+    padding-bottom: 10px;
+}
+
+.signupDoctor-form .signup-checkbox label {
+    color: #404040;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    margin: 0;
+    padding: 0 0 0 7px;
+    vertical-align: top;
+}
+
+.signupDoctor-form .signup-checkbox label a {
+    color: #2dbae3;
+}
+
+.signupDoctor-right .signup-benefit h3 {
+    color: #eb525d;
+    padding-bottom: 3px;
+}
+
+.signupDoctor-right .signup-benefit p {
+    font-size: 16px;
+    color: #00baf0;
+    line-height: 20px;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+}
+
+.virtual-practice {
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.signupDoctor-right .signup-benefit .benefit-list {
+    padding-right: 25px;
+}
+
+.signupDoctor-right .signup-benefit .benefit-list li {
+    font-size: 16px;
+    color: #565656;
+    line-height: 22px;
+    padding-bottom: 28px;
+}
+
+.md-effect-5 .md-content.popupprofile-panel {
+    max-width: 690px;
+}
+
+.popupprofile-header {
+    background: #f5f5f5;
+}
+
+.popupprofile-header h3 {
+    font-size: 24px;
+    color: #02a3d1;
+    line-height: 28px;
+    padding: 18px 16px;
+    margin: 0;
+    font-weight: 600;
+}
+
+.profileDetail-panel {
+    background: #fff;
+    padding: 12px 26px;
+}
+
+.profileDetail-panel .consultProfile-img {
+    float: left;
+    width: 29%;
+    padding-top: 4px;
+}
+
+.profileDetail-panel .consultProfile-detail {
+    float: left;
+    width: 59%;
+    padding-left: 20px;
+    padding-top: 0;
+}
+
+.profileDetail-panel .profile-timingSolt {
+    float: left;
+    width: 55%;
+    padding: 30px 0 0;
+}
+
+.profileDetail-panel .consult-charges {
+    float: left;
+    width: 45%;
+    padding: 30px 58px 0 15px;
+}
+
+.profileDetail-panel h2 {
+    color: #333333;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    margin: 0;
+    padding: 0 0 8px;
+    text-transform: uppercase;
+}
+
+.profileconsult-charges p {
+    color: #6b686a;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 20px;
+    margin: 0;
+    padding: 0 0 25px;
+}
+
+.profileDetail-panel .consultProfile-detail h4 {
+    padding-bottom: 12px;
+}
+/*.myappointment-detail, .medicalreport-detail, .myaccountm-detail, .myprofilem-detail{display:none;}
+.myappointment-detail.selected, .medicalreport-detail.selected, .myaccountm-detail.selected, .myprofilem-detail.selected{display:block;}*/
+
+.myappointment-detail {
+    padding-bottom: 35px;
+}
+
+.myappointment-header {
+    padding: 34px 0 27px 0;
+}
+
+.myappointmentSub-box {
+    padding: 11px 18px 11px 18px;
+}
+
+.myappointment-box {
+    margin-bottom: 25px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+}
+
+.myappointment-title {
+    margin: 0 -8px;
+    padding: 0;
+}
+
+.myappointment-title li {
+    padding: 0 8px;
+    width: 25%;
+    float: left;
+}
+
+.myappointment-title li a {
+    display: block;
+    border-radius: 6px;
+    height: 74px;
+    font-size: 18px;
+    background-color: #00baf0;
+    color: #fff;
+    line-height: 30px;
+    font-weight: 300;
+    padding-left: 69px;
+}
+
+.myappointment-title li a:hover {
+    background-color: #eb525d;
+}
+
+.myappointment-title li a.activeLnk {
+    background-color: #eb525d;
+}
+
+.myappointment-title li a.appointment {
+    background-image: url(/../../assets/images/appointment-img.png);
+    background-position: 19px 20px;
+    background-repeat: no-repeat;
+    padding-top: 20px;
+}
+
+.myappointment-title li a.medical-rep {
+    background-image: url(/../../assets/images/medicalrep-img.png);
+    background-repeat: no-repeat;
+    background-position: 23px 20px;
+    padding-top: 20px;
+}
+
+.myappointment-title li a.myaccount {
+    background-image: url(/../../assets/images/myaccount-img.png);
+    background-repeat: no-repeat;
+    background-position: 25px 20px;
+    padding-top: 20px;
+}
+
+.myappointment-title li a.myprofile {
+    background-image: url(/../../assets/images/myprofile-img.png);
+    background-repeat: no-repeat;
+    background-position: 20px 13px;
+    padding-top: 20px;
+    line-height: 40px;
+}
+
+.appointment-title h3 {
+    color: #00baf0;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    margin: 0;
+    padding: 0 0 1px;
+    text-transform: uppercase;
+}
+
+.appointment-title h3 a {
+    color: #00baf0;
+}
+
+.appointment-title h3 a:hover {
+    color: #eb525d;
+}
+
+.appointment-title h4 {
+    color: #00baf0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0;
+    padding: 0 0 6px;
+    text-transform: uppercase;
+}
+
+.appointment-title p {
+    color: #6b686a;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+.appointment-report h2,
+.appointment-schedule h2 {
+    color: #333333;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    margin: 0;
+    padding: 0 0 8px;
+    text-transform: uppercase;
+}
+
+.appointmentReport-list {
+    margin: 0;
+    padding: 0;
+}
+
+.appointmentReport-list li {
+    padding-bottom: 2px;
+}
+
+.appointmentReport-list li a {
+    font-size: 14px;
+    color: #00baf0;
+    line-height: 20px;
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+}
+
+.appointmentReport-list li a:hover {
+    color: #eb525d;
+}
+
+.appointment-schedule p {
+    font-size: 14px;
+    color: #606060;
+    line-height: 20px;
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+}
+
+.appointment-schedule p span,
+.appointment-schedule-history p span {
+    color: #00baf0;
+}
+
+.myappointment-box .appointment-img {
+    float: left;
+    width: 16.6%;
+}
+
+.appointment-img img,
+.consultProfile-img img,
+.doctor-img img {
+    width: 100%;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.videoconsultation-left .consultProfile-img img {
+    width: auto;
+    max-width: 100%;
+}
+
+.myappointment-box .appointment-title {
+    float: left;
+    width: 34%;
+    padding-left: 20px;
+}
+
+.myappointment-box .appointment-report {
+    float: left;
+    width: 25%;
+    padding-left: 20px;
+}
+
+.myappointment-box .appointment-schedule {
+    float: left;
+    width: 24.4%;
+    padding-left: 20px;
+}
+
+.myappointment-box .appointment-schedule-history {
+    float: left;
+    width: 100%;
+    padding-left: 20px;
+}
+
+.myappointmentBtn-panel {
+    background: #f1f1f1;
+    padding: 5px;
+    text-align: right;
+}
+
+.myappointmentBtn-panel a {
+    font-size: 16px;
+    color: #fff;
+    line-height: 40px;
+    font-weight: 400;
+    text-align: center;
+    border-radius: 15px;
+    background: #eb525d;
+    padding: 0 20px;
+    display: inline-block;
+    height: 40px;
+    margin-left: 4px;
+    cursor: pointer;
+    margin-right: 2px;
+}
+
+.myappointmentBtn-panel a:hover {
+    background: #00baf0;
+}
+
+.myappointmentBtn-panel a.upload-report {
+    background: #9d9d9d;
+}
+
+.myappointmentBtn-panel a.upload-report:hover {
+    background: #333;
+}
+
+.bookvideo-consult {
+    text-align: right;
+    padding-bottom: 10px;
+}
+
+.bookvideo-consult a {
+    font-size: 16px;
+    color: #fff;
+    line-height: 40px;
+    font-weight: 400;
+    text-align: center;
+    border-radius: 15px;
+    background: #eb525d;
+    padding: 0 27px;
+    display: inline-block;
+    height: 40px;
+    margin: 0;
+}
+
+.bookvideo-consult a:hover {
+    background: #00baf0;
+}
+
+.appointment-title .appointment-time {
+    color: #eb525d;
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0;
+    padding: 45px 0 0;
+}
+
+.uploadreport-panel {
+    border: 1px solid #49acd0;
+    border-radius: 15px;
+    padding: 20px 22px 17px;
+    margin-bottom: 24px;
+}
+
+.uploadreport-form label {
+    color: #6b686a;
+    float: left;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 36px;
+    margin: 0;
+    padding: 0 5px 0 0;
+}
+
+.uploadreport-form .input-text {
+    height: 35px;
+    border: 1px solid #d4d4d4;
+    -webkit-appearance: none;
+    border-radius: 4px;
+    background: #fff;
+    width: 63%;
+    float: left;
+    padding: 0 15px;
+    line-height: 35px;
+    font-size: 14px;
+    color: #6b686a;
+    font-weight: 400;
+    text-align: left;
+}
+
+.uploadreport-form .input-text.date-icon {
+    background: url(/../../assets/images/date-icon.png) no-repeat 95% center;
+}
+
+.uploadreport-form .input-file {
+    height: 35px;
+    border: 1px solid #d4d4d4;
+    -webkit-appearance: none;
+    border-radius: 4px;
+    background: #fff;
+    width: 54%;
+    float: left;
+    padding: 0 15px;
+    line-height: 35px;
+    font-size: 14px;
+    color: #6b686a;
+    font-weight: 400;
+    text-align: left;
+}
+
+.uploadreport-form .input-file .browser {
+    background: #ececec;
+    display: inline-block;
+    border: 1px solid #acacac;
+    font-size: 14px;
+    color: #000;
+    padding: 0 9px;
+    vertical-align: top;
+    margin-top: 5px;
+    line-height: 20px;
+}
+
+.uploadreport-form .field-upload {
+    font-size: 14px;
+    color: #fff;
+    line-height: 38px;
+    -webkit-appearance: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    text-align: center;
+    border-radius: 15px;
+    background: #eb525d;
+    padding: 0;
+    width: 23%;
+    display: block;
+    float: left;
+    height: 35px;
+    cursor: pointer;
+    margin-left: 1.5%;
+    border: none;
+}
+
+.uploadreport-form .field-upload:hover {
+    background: #00baf0;
+}
+
+.medicalreportTable .medicalreport-table {
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    table-layout: fixed;
+}
+
+.medicalreport-table tr th {
+    font-size: 16px;
+    color: #333333;
+    line-height: 20px;
+    background: #f1f1f1;
+    font-weight: 400;
+    padding: 15px 5px 16px 15px;
+}
+
+.medicalreport-table tr td {
+    font-size: 14px;
+    color: #6a6a6a;
+    line-height: 18px;
+    background: #fff;
+    font-weight: 400;
+    padding: 9px 5px 10px 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.medicalreport-table tr:last-child td {
+    border-bottom: none;
+}
+
+.medicalreport-table tr td.filename {
+    color: #00baf0;
+}
+
+.view-report,
+.delete-report {
+    margin: 0 8px;
+}
+
+.medicalreportTable {
+    padding-bottom: 50px;
+}
+
+.doctor-appointment .uploadreport-form .input-text {
+    width: 81%;
+}
+
+.doctor-appointment .uploadreport-form .input-text.from-date {
+    width: 32%;
+    margin-right: 1%;
+    float: left;
+}
+
+.doctor-appointment .uploadreport-form .input-text.to-date {
+    width: 32%;
+    float: left;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+.doctor-appointment .myprofilem-discript {
+    width: 33%;
+}
+
+.loadmore-consult {
+    background: #f1f1f1;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    height: 50px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.loadmore-consult a {
+    font-size: 16px;
+    color: #5a5a5a;
+    line-height: 50px;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+}
+
+.loadmore-consult a:hover {
+    color: #eb525d;
+}
+
+.accountTable {
+    padding-bottom: 42px;
+}
+
+.accountTable .account-table {
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    table-layout: fixed;
+    margin-bottom: 42px;
+}
+
+.account-table tr th {
+    font-size: 16px;
+    color: #333333;
+    line-height: 20px;
+    background: #f1f1f1;
+    font-weight: 400;
+    padding: 15px 5px 16px 15px;
+}
+
+.account-table tr td {
+    font-size: 14px;
+    color: #6a6a6a;
+    line-height: 18px;
+    background: #fff;
+    font-weight: 400;
+    padding: 9px 5px 10px 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.account-table tr:last-child td {
+    border-bottom: none;
+}
+
+.accountTable p {
+    font-size: 14px;
+    color: #6a6a6a;
+    line-height: 22px;
+    font-weight: 400;
+    padding: 0 0 21px;
+    margin: 0;
+}
+
+.accountTable p a {
+    color: #00baf0;
+}
+
+.myprofilem-header {
+    border: 1px solid #00baf0;
+    border-radius: 6px;
+    padding: 11px 18px;
+    margin-bottom: 30px;
+}
+
+.myprofilem-img {
+    background: #e2e2e2;
+    height: 150px;
+    position: relative;
+    width: 16%;
+    float: left;
+    text-align: center;
+    overflow: hidden;
+}
+
+.myprofilem-img img {
+    position: relative;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+}
+
+.myprofilem-discript {
+    float: left;
+    width: 31%;
+    padding-left: 20px;
+}
+
+.myprofilem-about {
+    float: left;
+    width: 53%;
+    padding-left: 20px;
+}
+
+.myprofilem-discript h3 {
+    font-weight: 600;
+    font-size: 18px;
+    color: #00baf0;
+    line-height: 22px;
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.myprofilem-discript h3 a:hover {
+    color: #eb525d;
+}
+
+.myprofilem-discript p {
+    font-size: 14px;
+    color: #ababab;
+    line-height: 22px;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+}
+
+.myprofilem-discript p.emailcont {
+    padding-top: 44px;
+}
+
+.myprofilem-discript p a {
+    color: #ababab;
+}
+
+.myprofilem-about h4 {
+    font-size: 16px;
+    color: #404040;
+    line-height: 20px;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+}
+
+.myprofilem-about p {
+    font-size: 14px;
+    color: #6a6a6a;
+    line-height: 20px;
+    font-weight: 400;
+    padding: 10px 0 14px;
+    margin: 0;
+}
+
+.edit-profile {
+    background: url("/../../assets/images/edit-profile.png") no-repeat right center;
+    border-left: 1px solid #a8a8a8;
+    bottom: 4px;
+    height: 17px;
+    position: absolute;
+    right: 6px;
+    width: 21px;
+}
+
+.myprofilem-title {
+    float: left;
+    width: 31%;
+    padding-left: 20px;
+}
+
+.myprofilem-title h3 {
+    color: #00baf0;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    margin: 0;
+    padding: 0 0 1px;
+    text-transform: uppercase;
+}
+
+.myprofilem-title h3 a {
+    color: #00baf0;
+}
+
+.myprofilem-title h3 a:hover {
+    color: #eb525d;
+}
+
+.myprofilem-title h4 {
+    color: #00baf0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0;
+    padding: 0 0 6px;
+    text-transform: uppercase;
+}
+
+.myprofilem-title p {
+    color: #6b686a;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+.myprofilem-title .appointment-time {
+    color: #eb525d;
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0;
+    padding: 45px 0 0;
+}
+
+.myprofilem-detail .profile-timingSolt {
+    width: 53%;
+    float: left;
+    padding-left: 20px;
+    padding-top: 0;
+}
+
+.myprofilem-detail .profile-timingSolt h2 {
+    color: #333333;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    margin: 0;
+    padding: 0 0 8px;
+    text-transform: uppercase;
+}
+
+.myprofilem-detail .profile-timingSolt .slots-list li {
+    display: inline-block;
+    width: 48%;
+}
+
+.myprofilem-body {
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 15px 0 0;
+    margin-bottom: 60px;
+}
+
+.myprofilem-body .signupDoctor-form .row {
+    margin: 0 -10px;
+}
+
+.myprofilem-body .signupDoctor-form .information {
+    padding: 0 25px 15px;
+}
+
+.information .input-field,
+.information .input-select {
+    padding: 0 11px 22px;
+}
+
+.information .doctorAccount {
+    max-width: none;
+}
+
+.information .input-field .righttext {
+    font-size: 12px;
+    color: #787577;
+    line-height: 20px;
+    display: block;
+    text-align: right;
+}
+
+.information .doctorAccount-sub {
+    max-width: 383px;
+}
+
+.infoRadio-panel {
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+.infoRadio-panel .male-radio {
+    padding-right: 15px;
+}
+
+.infoRadio-panel input {
+    margin: 0;
+}
+
+.signupDoctor-form .infoRadio-panel label {
+    font-size: 14px;
+    color: #777777;
+    display: inline-block;
+}
+
+.signupDoctor-form label .red {
+    color: #eb525d;
+}
+
+.information-right .input-field,
+.information-right .input-select {
+    padding-bottom: 15px;
+}
+
+.signupDoctor-form .information .input-field textarea {
+    height: 135px;
+}
+
+.signupDoctor-form .information-right .input-field textarea {
+    height: 90px;
+}
+
+.updateProfile-btn {
+    background: #f1f1f1;
+    padding: 5px 14px;
+    text-align: right;
+}
+
+.updateProfile-btn .updateprofile {
+    font-size: 16px;
+    color: #fff;
+    -webkit-appearance: none;
+    line-height: 40px;
+    font-weight: 400;
+    text-align: center;
+    border-radius: 15px;
+    text-transform: uppercase;
+    border: none;
+    background: #eb525d;
+    padding: 0 20px;
+    display: inline-block;
+    height: 40px;
+    cursor: pointer;
+}
+
+.updateProfile-btn .updateprofile:hover {
+    background: #00baf0;
+}
+
+.doctorprofile-form .information .doctorAccount-sub {
+    max-width: 500px;
+}
+
+.uservideoTop-panel {
+    background: #00baf0;
+    padding: 20px 0;
+}
+
+.uservideo-header .uservideo-img {
+    position: relative;
+    border: 2px solid #ecfafe;
+    background: #fff;
+    border-radius: 3px;
+    width: 14.2%;
+    float: left;
+}
+
+.uservideo-header .uservideo-img img {
+    display: block;
+    max-width: 100%;
+}
+
+.user-status {
+    position: absolute;
+    bottom: 6px;
+    right: 7px;
+    width: 23px;
+    height: 23px;
+    background: #7a7877;
+    border: 5px solid #ffffff;
+    border-radius: 100%;
+    box-shadow: 0 0 2px #d6d6d6;
+}
+
+.user-status.online {
+    background: #5d9e11;
+    text-align: center;
+    color: #fff;
+}
+
+.user-status.busy {
+    background: #5d9e11 !important;
+    text-align: center;
+    color: #fff;
+    border-width: 0px;
+    font-size: 16px;
+    padding-top: 1px;
+}
+
+.uservideo-header .uservideo-title {
+    float: left;
+    padding-left: 20px;
+    width: 36%;
+}
+
+.uservideo-header .uservideo-report {
+    float: left;
+    padding-left: 20px;
+    width: 25.2%;
+}
+
+.uservideo-header .uservideo-schedule {
+    float: left;
+    padding-left: 20px;
+    width: 24.6%;
+}
+
+.uservideo-title h3 {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    margin: 0;
+    padding: 0 0 1px;
+    text-transform: uppercase;
+}
+
+.uservideo-title h3 a {
+    color: #fff;
+}
+
+.uservideo-title h4 {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0;
+    padding: 0 0 6px;
+    text-transform: uppercase;
+}
+
+.uservideo-title p {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+.uservideo-report h2,
+.uservideo-schedule h2 {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    margin: 0;
+    padding: 0 0 8px;
+    text-transform: uppercase;
+}
+
+.uservideo-report .appointmentReport-list {
+    margin: 0;
+    padding: 0;
+}
+
+.uservideo-report .appointmentReport-list li {
+    padding-bottom: 2px;
+}
+
+.uservideo-report .appointmentReport-list li a {
+    font-size: 14px;
+    color: #fff;
+    line-height: 20px;
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+}
+
+.uservideo-report .appointmentReport-list li a:hover {
+    color: #eb525d;
+}
+
+.uservideo-schedule p {
+    font-size: 14px;
+    color: #fff;
+    line-height: 20px;
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+}
+
+.uservideo-header .uservideo-discript {
+    float: left;
+    padding-left: 20px;
+    width: 36%;
+}
+
+.uservideo-header .uservideo-discript h3 {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+.uservideo-header .uservideo-discript h3 a {
+    color: #fff;
+}
+
+.uservideo-header .uservideo-discript h3 a:hover {
+    color: #eb525d;
+}
+
+.uservideo-header .uservideo-discript p {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    margin: 0;
+    padding: 0;
+}
+
+.uservideo-header .uservideo-discript p a {
+    color: #fff;
+}
+
+.uservideo-header .uservideo-discript p.emailcont {
+    padding-top: 20px;
+}
+
+.backToappointment {
+    background: #f1f1f1;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 10px;
+}
+
+.backToappointment-block {
+    padding: 5px 0;
+}
+
+.backToappointment-block h2 {
+    background: url(/../../assets/images/back-appointment.png) no-repeat 3px center;
+    float: left;
+    font-size: 16px;
+    color: #6b686a;
+    line-height: 40px;
+    font-weight: 400;
+    padding: 0 0 0 40px;
+    margin: 0;
+    width: 50%;
+}
+
+.backToappointment-block .report-extend {
+    text-align: right;
+}
+
+.report-extend a {
+    font-size: 16px;
+    color: #fff;
+    line-height: 40px;
+    font-weight: 400;
+    padding: 0 20px;
+    background: #9d9d9d;
+    height: 40px;
+    margin: 0 5px 0 0;
+    border-radius: 15px;
+    display: inline-block;
+    text-align: center;
+}
+
+.report-extend a:hover {
+    background: #333;
+}
+
+.videoconversion-panel {
+    padding-bottom: 55px;
+}
+
+.videoconversion-left {
+    width: 69.1%;
+    float: left;
+    border-right: 1px solid #d0d0d0;
+}
+
+.videoconversion-right {
+    float: left;
+    width: 30.9%;
+}
+
+.videoconversion-header {
+    background: #eceae9;
+    padding: 10px 8px;
+}
+
+.videoconversion-header .friendblock {
+    float: left;
+    width: 50%;
+}
+
+.friendblock .userimg {
+    width: 41px;
+    height: 41px;
+    overflow: hidden;
+    border-radius: 100%;
+    background: #ffffff;
+    text-align: center;
+    float: left;
+    margin-right: 17px;
+}
+
+.friendblock .userimg img {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+}
+
+.friendblock p {
+    font-size: 16px;
+    color: #525151;
+    line-height: 20px;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+}
+
+.friendblock span {
+    font-size: 12px;
+    color: #7e7e7e;
+    line-height: 20px;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+}
+
+.videoChat-header {
+    background: #eceae9;
+    padding: 10px 8px;
+}
+
+.videochat-title .userimg {
+    width: 41px;
+    height: 41px;
+    overflow: hidden;
+    border-radius: 100%;
+    background: #ffffff;
+    text-align: center;
+    float: left;
+    margin-right: 17px;
+}
+
+.videochat-title .userimg img {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+}
+
+.videochat-title p {
+    font-size: 16px;
+    color: #525151;
+    line-height: 40px;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+}
+
+.videochat-title span {
+    font-size: 12px;
+    color: #7e7e7e;
+    line-height: 20px;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+}
+
+.videoChat-body {
+    background: #c8dfe6;
+    min-height: 546px;
+}
+
+.videoChat-body .videoChatbody-panel {
+    padding: 10px 20px 10px;
+    max-height: 546px;
+    overflow: auto;
+}
+
+.small-video-chat {
+    width: 210px;
+    height: 158px;
+    overflow: hidden;
+    border: 2px solid #fff;
+}
+
+.chatingBox {
+    display: block;
+    float: left;
+    width: 100%;
+}
+
+.chatbox-left .chatingBox-inner {
+    background: #ffffff;
+    border-radius: 6px;
+    box-shadow: 3px 3px 2px #c1c4c6;
+    float: left;
+    margin: 8px 0;
+    padding: 8px 0 5px 0;
+    position: relative;
+}
+
+.chatingBox-inner {
+    max-width: 83%;
+    min-width: 165px;
+}
+
+.chatbox-left .chatingBox-inner:before {
+    background: url(/../../assets/images/left-chatarrow.png) no-repeat left top;
+    content: "";
+    display: block;
+    height: 19px;
+    left: -16px;
+    position: absolute;
+    top: 10px;
+    width: 16px;
+}
+
+.chatbox-right .chatingBox-inner:before {
+    background: url(/../../assets/Images/right-chatarrow.png) no-repeat left top;
+    content: "";
+    display: block;
+    height: 19px;
+    position: absolute;
+    right: -16px;
+    top: 10px;
+    width: 16px;
+}
+
+.chatbox-right .chatingBox-inner {
+    background: none repeat scroll 0 0 #dcf7c9;
+    border-radius: 6px;
+    box-shadow: 3px 3px 2px #c1c4c6;
+    float: right;
+    margin: 8px 0;
+    padding: 8px 0 5px 0;
+    position: relative;
+    text-align: right;
+}
+
+.chatingBox-inner p {
+    color: #444444;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    margin: 0;
+    padding: 0 10px;
+    word-wrap: break-word;
+}
+
+.chatingBox-inner span {
+    color: #797979;
+    display: block;
+    font-size: 11px;
+    font-weight: 300;
+    line-height: 16px;
+    margin: 0;
+    padding: 1px 0 0;
+    text-align: right;
+}
+
+.chatbox-left .chatingBox-inner span {
+    padding-right: 6px;
+}
+
+.chatbox-right .chatingBox-inner span {
+    text-align: left;
+}
+
+.chatbox-right .chatingBox-inner span span {
+    padding-left: 6px;
+}
+
+.chatingBox-inner span span {
+    display: inline-block;
+    padding-left: 7px;
+}
+
+.chatrightimg-second {
+    margin-left: -2px;
+}
+
+.videoconversion-right .inputchat-panel {
+    background: #e5e2e2;
+    padding: 10px 8px;
+}
+
+.videoconversion-right .inputchat-panel input {
+    background: url(/../../assets/images/chat-icon.png) no-repeat 97% center,
+        url(/../../assets/images/chat-border.png) no-repeat 88% center #ffffff;
+    height: 40px;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #979797;
+    line-height: 40px;
+    padding: 0 50px 0 10px;
+    font-weight: 300;
+    border: none;
+    width: 100%;
+}
+
+.videoconversion-body {
+    background: #72706e;
+    min-height: 605px;
+    position: relative;
+    padding-top: 1px;
+}
+
+.start-videoconversion,
+.msg-videoconversion,
+.msg-videoconversion_doctor,
+.msg-videoconversion,
+.callStatusMessage,
+.callPaitentBusymsg {
+    left: 50%;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    margin-top: -33px;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+}
+
+.msg-videoconversion label,
+.msg-videoconversion_doctor label,
+.start-videoconversion label,
+.callStatusMessage label,
+.callPaitentBusymsg label {
+    font-size: 16px;
+    color: #fff;
+    line-height: 35px;
+    font-weight: 400;
+    /*padding: 0 36px;
+        margin: 0;
+        border-radius: 36px;
+        text-align: center;
+        background: #89c112;
+        
+        height: 66px;*/
+    /*text-transform: uppercase;*/
+    display: inline-block;
+}
+
+.start-videoconversion a,
+.msg-videoconversion a,
+.callStatusMessage a,
+.callPaitentBusymsg a {
+    font-size: 16px;
+    color: #fff;
+    line-height: 66px;
+    font-weight: 400;
+    padding: 0 36px;
+    margin: 0;
+    border-radius: 36px;
+    text-align: center;
+    background: #89c112;
+    text-transform: uppercase;
+    height: 66px;
+    display: inline-block;
+}
+
+.start-videoconversion a:hover {
+    background: #333;
+}
+
+.appointment-schedule-history .audio-icon {
+    border: 1px solid #727272;
+    width: 28px;
+    height: 28px;
+    text-align: center;
+    display: inline-block;
+}
+
+.appointment-schedule-history .audio-icon img {
+    vertical-align: middle;
+}
+
+.audio-icon.doctor {
+    background-image: url(/../../assets/images/doctor-user.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.audio-icon.patient {
+    background-image: url(/../../assets/images/audio-user.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.videocalling-panel {
+    text-align: center;
+}
+
+.videocalling-block {
+    left: 50%;
+    position: absolute;
+    top: 46%;
+    transform: translateY(-50%) translateX(-50%);
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    -ms-transform: translateY(-50%) translateX(-50%);
+    width: 24%;
+}
+
+.videocalling-block .userblock .videoCall-img {
+    border: 3px solid #7aa945;
+    border-radius: 6px;
+    background: #fff;
+    overflow: hidden;
+    width: 100%;
+}
+
+.videocalling-block .yourblock .videoCall-img {
+    border: 3px solid #999999;
+    border-radius: 6px;
+    background: #fff;
+    overflow: hidden;
+    width: 100%;
+}
+
+.videocalling-block .videoCall-box .videoCall-img img {
+    display: block;
+}
+
+.videocalling-block .videoCall-box p {
+    font-size: 16px;
+    color: #fff;
+    line-height: 22px;
+    font-weight: 300;
+    padding: 8px 0 4px;
+    margin: 0;
+}
+
+.videocalling-block .callingblock {
+    padding-bottom: 13px;
+}
+
+.videocalling-block .callingblock span {
+    font-size: 14px;
+    color: #cacaca;
+    line-height: 20px;
+    display: block;
+    font-weight: 300;
+    padding: 0 0 10px;
+    margin: 0;
+}
+
+.videoCall-img img {
+    width: 185px !important;
+    height: 149px !important;
+}
+
+.videocalling-block .videoCall-box {
+    display: inline-block;
+    width: 100%;
+}
+
+.callFunction-panel {
+    position: absolute;
+    bottom: 13px;
+    left: 50%;
+    margin-left: -80px;
+}
+
+.callFunction-panel ul {
+    background: #fff;
+    border-radius: 6px;
+    height: 51px;
+    margin: 0 0 0 17px;
+    padding: 0;
+    text-align: center;
+    width: 163px;
+    margin: 0;
+}
+
+.callFunction-panel li {
+    display: inline-block;
+    padding: 13px;
+}
+
+.callFunction-panel li a.call-start {
+    background: url(/../../assets/images/videoCall-endGreen.png) no-repeat left center;
+}
+
+.callFunction-panel li a.call-end {
+    background: url(/../../assets/images/videoCall-end.png) no-repeat left center;
+}
+
+.callFunction-panel li a {
+    display: block;
+    font-size: 12px;
+    color: #7e7e7e;
+    line-height: 24px;
+    font-weight: 400;
+    padding: 0 0 0 28px;
+}
+
+.conversionRight-control {
+    float: right;
+}
+
+.conversionRight-control ul {
+    padding: 0;
+    margin: 0;
+    float: left;
+    width: 100%;
+}
+
+.conversionRight-control li {
+    padding: 0 10px;
+    border-left: 1px solid #d0d0d0;
+    float: left;
+}
+
+.conversionRight-control li a {
+    font-size: 12px;
+    color: #7e7e7e;
+    line-height: 40px;
+    font-weight: 400;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.conversionRight-control li a.mute-on {
+    background: url(/../../assets/images/mute-icon.png) no-repeat left center;
+    padding-left: 22px;
+}
+
+.conversionRight-control li a.mute-off {
+    background: url(/../../assets/images/mute-icon2-new.png) no-repeat left center;
+    padding-left: 22px;
+}
+
+.conversionRight-control li a.end-conversion {
+    background: url(/../../assets/images/videoCall-end.png) no-repeat left center;
+    padding-left: 32px;
+}
+
+.big-videoChat img {
+    display: block;
+    max-width: 100%;
+}
+
+.small-video-chat {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.zoom-icon {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.zoom-icon a {
+    background: url(/../../assets/images/zoom-icon.png) no-repeat center center #fff;
+    width: 41px;
+    height: 41px;
+    border-radius: 100%;
+    display: block;
+}
+
+.userprofile-detail .profile-timingSolt p {
+    color: #6a6a6a;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0;
+    padding: 0 0 18px;
+}
+
+.userprofile-detail .contactinfo {
+    padding: 0;
+    margin: 0;
+}
+
+.userprofile-detail .contactinfo li {
+    font-size: 14px;
+    color: #6a6a6a;
+    line-height: 20px;
+    padding: 0 0 4px;
+    margin: 0;
+}
+
+.userprofile-detail .contactinfo li span {
+    color: #00baf0;
+    font-weight: 400;
+    display: inline-block;
+    width: 80px;
+}
+
+.ui-timepicker-container {
+    position: absolute;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.ui-timepicker {
+    box-sizing: content-box;
+    display: block;
+    height: 205px;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0 1px;
+    text-align: left;
+}
+
+.ui-timepicker-viewport {
+    box-sizing: content-box;
+    display: block;
+    height: 205px;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.ui-timepicker-standard {
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 1.1em;
+    background-color: #fff;
+    border: 1px solid #d4d4d4;
+    color: #222;
+    margin: 0;
+    padding: 2px;
+}
+
+.ui-timepicker-standard a {
+    border: 1px solid transparent;
+    color: #222;
+    display: block;
+    padding: 0.2em 0.4em;
+    text-decoration: none;
+}
+
+.ui-timepicker-standard .ui-state-hover {
+    background-color: #00baf0;
+    border: 1px solid #1694b8;
+    font-weight: 400;
+    color: #fff;
+}
+
+.ui-timepicker-standard .ui-menu-item {
+    margin: 0;
+    padding: 0;
+}
+
+.ui-timepicker-corners,
+.ui-timepicker-corners .ui-corner-all {
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.ui-timepicker-hidden {
+    display: none;
+}
+
+.ui-timepicker-no-scrollbar .ui-timepicker {
+    border: 0;
+}
+
+.loginheader-panel .auth-function {
+    background: #fff;
+    box-shadow: 0 0 4px #8a8a8a;
+    opacity: 0;
+    transition: opacity 0.5s ease 0s, visibility 0.5s ease 0s;
+    visibility: hidden;
+    padding: 2px 20px 0;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    width: 185px;
+    z-index: 2;
+    margin-top: 10px;
+}
+
+.loginheader-panel .auth-function:before {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 12px solid #fff;
+    content: "";
+    display: block;
+    position: relative;
+    right: -78%;
+    top: -14px;
+}
+
+.auth-function li {
+    padding-bottom: 10px;
+}
+
+.auth-function li a {
+    font-size: 14px;
+    color: #2e2e2e;
+    line-height: 20px;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+    display: block;
+    text-align: left;
+}
+
+.loginheader-panel .auth-function.open-function {
+    opacity: 1;
+    visibility: visible;
+}
+
+.slicknav_btn {
+    position: relative;
+    display: block;
+    vertical-align: middle;
+    color: #fff;
+    float: right;
+    padding: 10px 15px;
+    line-height: 1.125em;
+    cursor: pointer;
+}
+
+.slicknav_btn:hover {
+    color: #fff;
+}
+
+.slicknav_btn .slicknav_icon-bar + .slicknav_icon-bar {
+    margin-top: 3px;
+}
+
+.slicknav_menu {
+    background: #4c4c4c;
+    display: none;
+}
+
+.slicknav_menu .slicknav_menutxt {
+    display: block;
+    line-height: 18px;
+    float: left;
+}
+
+.slicknav_menu .slicknav_icon {
+    float: left;
+    margin: 0.188em 0 0 0.438em;
+}
+
+.slicknav_menu .slicknav_no-text {
+    margin: 0;
+}
+
+.slicknav_menu .slicknav_icon-bar {
+    display: block;
+    width: 1.125em;
+    height: 2px;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 1px;
+    -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+}
+
+.slicknav_menu:before {
+    content: " ";
+    display: table;
+}
+
+.slicknav_menu:after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+.slicknav_menu .slicknav_icon-bar {
+    background-color: #fff;
+}
+
+.slicknav_nav {
+    color: #fff;
+    font-size: 0.875em;
+    list-style: outside none none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0 20px 12px;
+    width: 100%;
+}
+
+.slicknav_nav li {
+    padding: 5px 0;
+}
+
+.slicknav_nav li a {
+    font-size: 16px;
+    color: #fff;
+    line-height: 20px;
+    padding: 0;
+    margin: 0;
+    transition: all 0.4s ease 0s;
+    -webkit-transition: all 0.4s ease 0s;
+    -ms-transition: all 0.4s ease 0s;
+}
+
+.slicknav_nav li a:hover {
+    color: #00baf0;
+}
+
+#back-top::before {
+    color: #7be0e8;
+    content: "";
+    font-family: "FontAwesome";
+    font-size: 18px;
+    left: 16px;
+    position: absolute;
+    top: 11px;
+}
+
+#back-top {
+    background-color: white;
+    border: 3px solid #11c7d5;
+    border-radius: 99px;
+    bottom: -70px;
+    font-size: 30px;
+    margin: 0 0 10px 10px;
+    padding: 25px;
+    position: fixed;
+    right: 20px;
+    text-align: center;
+    transition: all 0.3s ease 0s;
+    z-index: 999;
+}
+
+#back-top:hover {
+    background-color: #0db7c4;
+    border: 3px solid white;
+    cursor: pointer;
+}
+
+#back-top:hover::before {
+    color: white;
+}
+
+.doctorAccount-timeslot {
+    padding-bottom: 15px;
+}
+
+.doctorAccount-sub .doctortime-btn {
+    width: 100%;
+    float: left;
+    padding: 0 11px 12px;
+    text-align: right;
+}
+
+.charges-btn {
+    float: right;
+    padding: 0 11px 12px;
+    text-align: right;
+}
+
+.charges-btn a,
+.doctorAccount-sub .doctortime-btn a {
+    font-size: 14px;
+    color: #fff;
+    -webkit-appearance: none;
+    line-height: 36px;
+    font-weight: 400;
+    text-align: center;
+    border-radius: 15px;
+    text-transform: uppercase;
+    border: none;
+    background: #9d9d9d;
+    padding: 0 20px;
+    display: inline-block;
+    height: 34px;
+}
+
+.charges-btn a:hover,
+.doctorAccount-sub .doctortime-btn a:hover {
+    background: #333;
+}
+
+.doctorAccount-sub .doctortime-btn a.applyall-btn {
+    background: #eb525d;
+}
+
+.doctorAccount-sub .doctortime-btn a.applyall-btn:hover {
+    background: #00baf0;
+}
+
+.signupDoctor-form .chages-value span {
+    display: inline-block;
+    vertical-align: top;
+    line-height: 36px;
+    padding: 0 5px;
+}
+
+.signupDoctor-form .chages-value .input-text {
+    display: inline-block;
+    vertical-align: top;
+    width: 15%;
+}
+
+.consultationDoctor .chosen-container-single .chosen-single {
+    height: 100%;
+    border: 0;
+    box-shadow: none;
+    line-height: 48px;
+    background: none;
+    border-radius: 0;
+}
+
+.consultationDoctor .chosen-container-active.chosen-with-drop .chosen-single {
+    height: 100%;
+    border: 0;
+    box-shadow: none;
+    line-height: 48px;
+    background: none;
+    border-radius: 0;
+}
+
+.consultationDoctor .chosen-container-single .chosen-drop {
+    margin-top: 1px;
+}
+
+.consultationDoctor .chosen-container .chosen-drop {
+    border: 1px solid #00baf0;
+    box-shadow: none;
+    border-top: none;
+}
+
+.boockAppointment-form .input-field select {
+    height: 35px;
+    border: 1px solid #d4d4d4;
+    border-radius: 4px;
+    background: #fff;
+    -webkit-appearance: none;
+    width: 100%;
+    padding: 0 8px;
+    line-height: 35px;
+    font-size: 14px;
+    color: #6b686a;
+    font-weight: 400;
+    text-align: left;
+    margin-top: 22px;
+    float: none;
+}
+
+.input-select .chosen-container-single .chosen-single,
+.boockAppointment-form .input-field .chosen-container-single .chosen-single {
+    background: #fff;
+    border: 1px solid #d4d4d4;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #6b686a;
+    font-weight: 400;
+    box-shadow: none;
+    height: 35px;
+    line-height: 35px;
+}
+
+.input-select .chosen-container-active.chosen-with-drop .chosen-single,
+.boockAppointment-form .input-field .chosen-container-active.chosen-with-drop .chosen-single {
+    background: #fff;
+    border: 1px solid #d4d4d4;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #6b686a;
+    font-weight: 400;
+    box-shadow: none;
+}
+
+.input-select .chosen-container {
+    width: 100%;
+}
+
+.boockAppointment-form .input-field .chosen-container {
+    width: 37%;
+}
+
+.input-select .chosen-container-single .chosen-single div b,
+.boockAppointment-form .input-field.chosen-container-single .chosen-single div b {
+    background-position: 0 9px;
+}
+
+.input-select .chosen-container-active.chosen-with-drop .chosen-single div b,
+.boockAppointment-form .input-field .chosen-container-active.chosen-with-drop .chosen-single div b {
+    background-position: -18px 9px;
+}
+
+.field-validation-error {
+    color: #f00 !important;
+}
+
+.ui-jqgrid .ui-jqgrid-htable th.ui-state-default {
+    background: #f1f1f1;
+    border-bottom: none !important;
+    padding: 15px 5px 16px 15px;
+}
+
+.ui-jqgrid-view th.ui-state-default span {
+    font-size: 16px;
+    color: #333333;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+.ui-jqgrid .ui-jqgrid-resize {
+    height: auto !important;
+    margin: 0;
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+    border-bottom: none;
+}
+
+.ui-jqgrid-btable tr:nth-child(even) {
+    background: #fff;
+}
+
+.ui-jqgrid tr.jqgrow td {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 9px 5px 10px 15px;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    color: #6a6a6a;
+    height: auto;
+}
+
+.ui-widget-content {
+    border: 1px solid #e0e0e0;
+}
+
+.ui-jqgrid .ui-jqgrid-htable th.ui-th-column:last-child {
+    border-right: 1px solid #e0e0e0;
+}
+
+.ui-jqgrid-bdiv tr.jqgrow td:last-child {
+    border-right: 1px solid #e0e0e0;
+}
+
+.ui-jqgrid .ui-pg-input {
+    height: 25px;
+}
+
+.ui-jqgrid .ui-paging-info {
+    padding-left: 12px;
+    margin-top: 0;
+    line-height: 20px;
+}
+
+.pdfpopup-view .uploadreport-form label {
+    display: block;
+    width: 100%;
+}
+
+.pdfpopup-view .uploadreport-form .field-upload {
+    width: 32%;
+}
+
+.pdfpopup-view .uploadreport-form .input-text {
+    width: 100%;
+}
+
+.pdfpopup-view .uploadreport-form .input-file {
+    width: 65%;
+}
+
+a,
+input[type="submit"] {
+    cursor: pointer !important;
+}
+
+.grid-norecords {
+    padding-left: 16px;
+}
+
+.about-top {
+    padding: 120px 15px 90px;
+}
+
+.about-top .pm-column-title {
+    text-align: center;
+    font-size: 24px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    color: #17abd6;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 0px;
+}
+
+.about-top .pm-title-divider {
+    width: 120px;
+    height: 1px;
+    background-color: #17abd6;
+    margin: 26px auto;
+}
+
+.about-top p {
+    color: #666;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    padding: 0 0 12px;
+    text-align: center;
+    margin: 0;
+}
+
+.about-box {
+    text-align: center;
+}
+
+.founder-meet {
+    padding: 110px 0 0 18px;
+}
+
+.founder-meet h5 {
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 32px;
+    margin: 0;
+    padding: 0 0 15px;
+    text-align: center;
+}
+
+.founder-meet p.light {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 20px;
+    padding: 0 0 12px;
+    text-align: center;
+    margin: 0;
+}
+
+.founder-meet .pm-column-spacing {
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.founder-meet .pm-staff-profile-container {
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 290px;
+    position: relative;
+    width: 100%;
+}
+
+.founder-meet .pm-staff-profile-info {
+    padding: 50px 30px 0;
+    text-align: center;
+}
+
+.founder-meet .pm-staff-profile-overlay-container {
+    height: 290px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.founder-meet .pm-staff-profile-quote {
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 290px;
+    left: 0;
+    text-align: center;
+    position: absolute;
+    top: 290px;
+    transition: all 0.5s ease 0s;
+    width: 100%;
+    z-index: 2;
+}
+
+.founder-meet .pm-staff-profile-quote p {
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.founder-meet .pm-square-btn {
+    border: 3px solid white;
+    color: white !important;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 10px 0;
+    min-width: 100px;
+    padding: 10px 25px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all 0.4s ease 0s;
+}
+
+.founder-meet .pm-square-btn:hover {
+    background-color: #0db7c4;
+    border: 3px solid #0db7c4;
+    color: white !important;
+}
+
+.founder-meet .pm-staff-profile-expander {
+    background-color: #f15b5a;
+    border: 3px solid white;
+    border-radius: 99px;
+    color: white;
+    display: table !important;
+    font-size: 18px !important;
+    height: 60px;
+    margin: 0 auto;
+    padding-top: 17px;
+    position: relative;
+    text-align: center;
+    top: 260px;
+    width: 60px;
+    z-index: 9;
+}
+
+.founder-meet .pm-staff-profile-name.light {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.founder-meet .pm-staff-profile-title.light {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.trackrecord-main {
+    padding: 100px 0 80px;
+}
+
+.trackrecord-head {
+    padding: 30px 15px;
+}
+
+.trackrecord-main h5 {
+    color: #00baf0;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 32px;
+    margin-bottom: 25px;
+    margin-top: 0;
+    text-align: center;
+}
+
+.trackrecord-main h5:after {
+    border-bottom: 1px solid #00baf0;
+    margin: 26px auto 0;
+    content: "";
+    display: block;
+    width: 270px;
+}
+
+.pm-column-title-divider {
+    border-top: 1px solid #0db7c4;
+    display: table;
+    height: 1px;
+    margin: 30px auto 0;
+    position: relative;
+    width: 270px;
+}
+
+.pm-column-title-divider img {
+    display: table;
+    margin: 0 auto;
+    position: relative;
+    top: -15px;
+}
+
+.trackrecord-main .desktop {
+    padding: 0 30px;
+    text-align: center;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.pm-static-icon.typcn {
+    display: inline-block !important;
+    font-size: 90px !important;
+    line-height: 96px !important;
+}
+
+.pm-static-icon {
+    background-color: #f15b5a;
+    border-radius: 99px;
+    color: white;
+    display: block;
+    font-size: 40px !important;
+    height: 160px;
+    padding: 24px;
+    width: 160px;
+    margin: 0 auto;
+}
+
+.pm-static-icon.fa {
+    display: inline-block !important;
+    font-size: 76px !important;
+    line-height: 106px !important;
+}
+
+.milestone {
+    margin: 15px 0;
+    position: relative;
+    text-align: center;
+}
+
+.milestone::after {
+    clear: both;
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.milestone .milestone-content {
+    color: #2c5c80;
+    font-size: 60px;
+    line-height: 73px;
+}
+
+.milestone .milestone-value {
+    color: #00baf0;
+    display: inline-block;
+    font-size: 42px;
+    font-weight: 600;
+}
+
+.milestone .milestone-description {
+    color: #5e5e5e;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+.ourphilosophy-main {
+    padding: 100px 0 80px;
+}
+
+.ourphilosophy-main .philosophy-left {
+    padding: 0 30px;
+}
+
+.ourphilosophy-main h4 {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    margin-top: 0;
+    padding: 0;
+}
+
+.ourphilosophy-main .pm-divider {
+    background-color: #fff;
+    height: 1px;
+    margin: 20px 0;
+    width: 80px;
+}
+
+.ourphilosophy-main p {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    padding: 0 0 12px;
+    margin: 0;
+}
+
+.pm-progress-bar-description {
+    color: white;
+    display: block;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 14px;
+    margin-bottom: 15px;
+    position: relative;
+    text-align: left;
+}
+
+.pm-progress-bar {
+    background-color: rgba(36, 43, 52, 0.8);
+    display: block;
+    height: 35px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.pm-progress-bar-diamond {
+    background-color: white;
+    border: 3px solid #0db7c4;
+    border-radius: 99px;
+    height: 60px;
+    margin-left: -45px;
+    position: absolute;
+    top: 15px;
+    width: 60px;
+    z-index: 120;
+}
+
+.pm-progress-bar-description span {
+    color: black;
+    font-size: 14px;
+    font-weight: 500;
+    left: 0;
+    margin-left: -30px;
+    opacity: 0;
+    position: absolute;
+    top: 40px;
+    z-index: 200;
+}
+
+.pm-progress-bar .pm-progress-bar-outer {
+    background-color: white;
+    border: 1px solid #34ceda;
+    height: 35px;
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+
+.ourpatients-panel {
+    padding: 100px 0 80px;
+}
+
+.ourpatients-head {
+    padding: 30px 15px;
+    text-align: center;
+}
+
+.ourpatients-panel h5 {
+    color: #00baf0;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 32px;
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+
+.ourpatients-panel h5:after {
+    border-bottom: 1px solid #00baf0;
+    margin: 26px auto 0;
+    content: "";
+    display: block;
+    width: 270px;
+}
+
+.ourpatients-panel .pm-column-title-divider {
+    border-top: 1px solid #0db7c4;
+    display: table;
+    height: 1px;
+    margin: 30px auto 0;
+    position: relative;
+    width: 270px;
+}
+
+.ourpatients-body {
+    padding-top: 30px;
+    padding-bottom: 60px;
+}
+
+.ourpatients-body .desktop {
+    padding: 0 30px;
+}
+
+.ourpatients-panel .pm-single-testimonial-shortcode {
+    height: auto;
+    text-align: center;
+    width: 100%;
+}
+
+.ourpatients-panel .pm-single-testimonial-img-bg {
+    background-position: center top;
+    background-repeat: no-repeat;
+    border: 5px solid #00baf0;
+    border-radius: 99px;
+    height: 200px;
+    margin: 0 auto 50px;
+    position: relative;
+    width: 200px;
+}
+
+.ourpatients-panel .pm-single-testimonial-avatar-icon {
+    background-color: white;
+    border: 3px solid #00baf0;
+    border-radius: 99px;
+    color: #0db7c4;
+    font-size: 30px !important;
+    height: 70px;
+    margin: 0 auto;
+    padding-top: 8px;
+    position: relative;
+    text-align: center;
+    top: 155px;
+    width: 70px;
+}
+
+.ourpatients-panel .pm-single-testimonial-shortcode .name {
+    color: #00baf0;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 24px;
+    padding: 0 0 10px;
+    margin: 0;
+}
+
+.ourpatients-panel .pm-single-testimonial-shortcode .title {
+    color: #00baf0;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    padding: 0 0 10px;
+    margin: 0;
+}
+
+.ourpatients-panel .pm-single-testimonial-divider {
+    background-color: #d1d1d1;
+    height: 1px;
+    margin: 20px auto;
+    width: 85px;
+}
+
+.ourpatients-panel .pm-single-testimonial-shortcode .quote {
+    color: #7e7e7e;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    padding: 0 0 10px;
+    margin: 0;
+}
+
+.ourpatients-panel .pm-single-testimonial-shortcode .date {
+    color: #00baf0;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 0 0 10px;
+    margin: 0;
+}
+
+.benefits-head {
+    padding: 80px 0 0;
+}
+
+.benefits-head h5 {
+    color: #00baf0;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 32px;
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+
+.benefits-head p {
+    color: #666;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    padding: 0 0 12px;
+    margin: 0;
+}
+
+.benefits-head p a {
+    color: #00baf0;
+}
+
+.benefits-head p strong {
+    font-weight: 600;
+}
+
+.benefits-head .pm-divider {
+    background-color: #0db7c4;
+    height: 1px;
+    margin: 20px 0;
+    width: 80px;
+}
+
+.benefit-accord {
+    padding: 0 0 80px;
+}
+
+.benefit-accord .panel-group {
+    margin: 30px 0;
+}
+
+.benefit-accord .panel-group .panel {
+    border-bottom: 0 solid #e3e3e3;
+    border-radius: 0;
+    margin-bottom: 1px;
+    background-color: #fff;
+    padding-bottom: 0;
+}
+
+.benefit-accord .panel-default > .panel-heading {
+    background-color: white;
+    border-color: transparent;
+    border-radius: 0;
+    color: inherit;
+    display: inline-block;
+    padding: 0;
+    transition: all 0.4s ease 0s;
+    width: 100%;
+}
+
+.benefit-accord .panel-title {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 0 !important;
+    margin-top: 0;
+    font-weight: 300;
+    color: inherit;
+}
+
+.benefit-accord .panel-title i {
+    background-color: #f15b5a;
+    color: white;
+    display: block;
+    float: right;
+    font-size: 14px;
+    padding: 15px;
+}
+
+.benefit-accord .panel-title > a {
+    color: #34ceda;
+    display: block;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 28px !important;
+    padding: 8px 0 8px 15px;
+    transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+}
+
+.benefit-accord .panel-title > a.pm-dark-link {
+    background-color: #00baf0;
+    color: white;
+    text-align: left;
+}
+
+.benefit-accord .collapse {
+    display: none;
+    visibility: hidden;
+}
+
+.benefit-accord .panel-collapse {
+    background-color: #0591ba;
+    float: left;
+    width: 100%;
+}
+
+.benefit-accord .collapse.in {
+    display: block;
+    visibility: visible;
+}
+
+.benefit-accord .collapsing {
+    height: 0;
+    overflow: hidden;
+    position: relative;
+    transition-duration: 0.35s;
+    transition-property: height, visibility;
+    transition-timing-function: ease;
+}
+
+.benefit-accord .panel-body {
+    float: left;
+    padding: 10px 4px;
+}
+
+.benefit-accord .panel-group .panel-heading + .panel-collapse .panel-body {
+    border-top: medium none;
+    padding: 20px 30px 20px 20px;
+}
+
+.benefit-accord .panel-body p {
+    color: white;
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 24px;
+    padding: 0 0 12px;
+    margin: 0;
+}
+
+.benefit-accord .panel-collapse a.pm-standard-link {
+    color: #fff;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+.contactusaddress {
+    padding: 80px 0 50px;
+}
+
+.contact-touch {
+    padding: 30px 15px;
+    text-align: center;
+}
+
+.contact-touch h5 {
+    color: #00baf0;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 32px;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+.contact-touch h5:after {
+    border-bottom: 1px solid #00baf0;
+    margin: 26px auto 0;
+    content: "";
+    display: block;
+    width: 270px;
+}
+
+.contact-touch .pm-column-title-divider {
+    border-top: 1px solid #0db7c4;
+    display: table;
+    height: 1px;
+    margin: 30px auto 0;
+    position: relative;
+    width: 270px;
+}
+
+.contact-touch p {
+    color: #666;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    padding: 0 0 12px;
+    margin: 0;
+}
+
+.contact-touch p strong {
+    line-height: 24px;
+    font-weight: 600;
+}
+
+.contact-touch p a {
+    color: #0db7c4;
+}
+
+.contact-fillform {
+    padding: 110px 15px;
+}
+
+.fillform-title {
+    margin-bottom: 30px;
+}
+
+.fillform-title h5 {
+    color: #00baf0;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 32px;
+    margin-bottom: 5px;
+    text-align: center;
+    margin-top: 0;
+}
+
+.fillform-title h5:after {
+    border-bottom: 1px solid #00baf0;
+    margin: 26px auto 0;
+    content: "";
+    display: block;
+    width: 270px;
+}
+
+.fillform-title .pm-column-title-divider {
+    border-top: 1px solid #0db7c4;
+    display: table;
+    height: 1px;
+    margin: 30px auto 0;
+    position: relative;
+    width: 270px;
+}
+
+.contact-fillform .pm-form-textfield {
+    background-color: transparent;
+    border: 1px solid #d4d4d4;
+    border-radius: 0;
+    color: #6b686a;
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding: 13px;
+    transition: all 0.5s ease 0s;
+    width: 100%;
+}
+
+.contact-fillform .pm-form-textarea {
+    background-color: transparent;
+    border: 1px solid #d4d4d4;
+    border-radius: 0;
+    color: #6b686a;
+    font-size: 16px;
+    margin-top: 10px;
+    min-height: 150px;
+    padding: 10px 13px;
+    transition: all 0.5s ease 0s;
+    width: 100%;
+}
+
+.contact-fillform .pm-form-submit-btn {
+    background-color: #f15b5a;
+    cursor: pointer;
+    border: medium none;
+    border-radius: 99px;
+    color: white !important;
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    height: auto;
+    margin: 35px auto 20px;
+    min-width: 100px;
+    padding: 14px 30px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.4s ease 0s;
+    width: auto;
+}
+
+.contact-fillform .pm-form-submit-btn:hover {
+    background: #00baf0;
+}
+
+.contact-fillform .pm-required {
+    color: #00baf0;
+    font-size: 14px;
+    font-weight: 300;
+    text-transform: uppercase;
+    padding: 0 0 12px;
+    margin: 0;
+    text-align: center;
+}
+
+.contactus-main iframe {
+    width: 100%;
+}
+
+.video-list {
+    width: 90px !important;
+}
+
+.video-list a {
+    line-height: 20px !important;
+}
+
+.notificationDiv {
+    border: solid 1px #000000;
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    color: #ffffff;
+    width: 300px;
+    display: none;
+}
+
+.notificationDiv:hover {
+    background: rgba(0, 0, 0, 1);
+}
+
+.notificationDiv .notificationDiv {
+    position: relative;
+}
+
+.divClose {
+    position: absolute;
+    top: 6px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.notificationDiv .appointment-schedule h2 {
+    color: #00baf0;
+    margin-right: 50px;
+}
+
+.notificationDiv .appointment-schedule .divClose h2 {
+    color: #fff;
+}
+
+.hide {
+    display: none !important;
+}
+
+.user-status.online.web {
+    border-width: 0px;
+    font-size: 16px;
+    padding-top: 1px;
+    background: #5d9e11;
+}
+
+.user-status.online.mobile {
+    border-width: 0px;
+    font-size: 21px;
+    padding-top: 1px;
+    background: #5d9e11;
+}
+
+.progressBar {
+    display: none;
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 1000px;
+    z-index: 10000000000;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+
+.progressBar .contentbox {
+    position: relative;
+    top: 35%;
+    text-align: center;
+    width: 100%;
+}
+
+.progressBar .contentbox .content {
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+}
+
+/*.toImage, .fromImg
+{
+    width: 120px !important;
+}*/
+.callPaitentBusymsgClose,
+.callStatusMessageClose {
+    font-size: 12px !important;
+    color: #fff !important;
+    line-height: 22px !important;
+    border-radius: 36px !important;
+    height: 21px !important;
+    padding: 0px !important;
+    background-color: #89c112 !important;
+    width: 21px !important;
+    margin-left: 10px !important;
+}
+
+#divVideoRemote {
+    background-color: #000;
+}
+
+#divVideoRemote video {
+    height: 599px !important;
+}

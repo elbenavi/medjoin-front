@@ -1,0 +1,31 @@
+<!-- <div class="card" style="width: 18rem;" *ngFor="let doctor of doctors">
+    <img [src]="'http://localhost:5000/resources/files/' + doctor.medicalDetail.urlLicenseCertificate" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{ doctor.firstName }} {{doctor.lastName}}</h5>
+      <p class="card-text"><span *ngFor="let specialization of specializations">{{ doctor.specialization }}</span></p>
+      <p class="card-text">
+          <span *ngFor="let tag of doctor.tags">{{tag.tagName}}</span>
+      </p>
+      <p class="card-text"><small>{{ doctor.rate }}</small></p>
+      <button class="btn btn-primary" (click)="openProfile(doctor)">Profile</button>
+      <button class="btn btn-danger" (click)="selectDoctor(doctor)" >Book Video Consultation</button>
+      <button class="btn btn-danger" [routerLink]="['/bookvideoconsultation', doctor.id]" routerLinkActive="router-link-active" >Book Video Consultation</button>
+    </div>
+  </div> -->
+
+  <div>
+    <div class="profile"  *ngFor="let doctor of doctors">
+      <div class="imageprofile">
+        <!-- <img [src]="'http://localhost:5000/resources/files/' + doctor.medicalDetail.urlLicenseCertificate"  alt="..."> -->
+        <img src="{{doctor.imgProfile | imageProfile}}"  alt="...">
+      </div>
+      <div class="info">
+        <h4 class="name">DR. {{ doctor.firstName }} {{doctor.lastName}}</h4>
+        <h5 class="specialitation">Plastic Surgeon & Cosmetic Surgeon</h5>
+        <p>MS (Gen Surgery), MCG, DNB (Plastic Surgery)Bangalore, Karmataca</p>
+        <span>$50 for 30 mins</span>
+        <button class="btn-prifile btn btn-primary" (click)="openProfile(doctor)">Profile</button>
+        <button class="btn btn-danger" (click)="selectDoctor(doctor)" >Book Video Consultation</button>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,61 @@
+<!-- <h1>pay-online!</h1>
+<button class="btn btn-primary" (click)="reserveAppointment()">Pagar</button> -->
+
+<div class="book-registration-column">
+    <div class="profile-modal">
+      <div class="imageprofile">
+        <!-- <img [src]="'http://localhost:5000/resources/files/' + doctor.medicalDetail.urlLicenseCertificate"  alt="..."> -->
+        <img src="{{doctor.imgProfile | imageProfile}}" alt="...">
+      </div>
+      <div class="info">
+        <h4 class="name">DR. {{ doctor.firstName }} {{doctor.lastName}}</h4>
+         <h5 class="specialitation">Plastic Surgeon & Cosmetic Surgeon</h5>
+        <p>MS (Gen Surgery), MCG, DNB (Plastic Surgery)Bangalore, Karmataca</p>
+      </div>
+    </div>
+  
+    <div class="schedule">
+      <h4>TIMING SLOTS</h4>
+      <div>
+        <p><span class="day">Monday</span><span class="time">9:30am-5:30pm</span></p>
+        <p><span class="day">Tuesday</span><span class="time">9:30am-5:30pm</span></p>
+        <p><span class="day">Wednesday</span><span class="time">9:30am-5:30pm</span></p>
+        <p><span class="day">Thursday</span><span class="time">9:30am-5:30pm</span></p>
+        <p><span class="day">Friday</span><span class="time">9:30am-5:30pm</span></p>
+      </div>
+    </div>
+  
+    <div class="charges">
+      <h4>CONSULTATION CHARGE</h4>
+      <div>
+        The Video Consultation charge of <span>$50 for 30 min</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="book-registration-column">
+      <h4>YOUR BOOKING INFORMATION</h4>
+      <h5>Name</h5>
+      <span>{{user.firstName}} {{user.lastName}}</span>
+      <h5>Email</h5>
+      <span>{{user.email}}</span>
+      <h5>Reason For Appintment</h5>
+      <span>{{appointment.reason}}</span>
+      <h5>Preferred Day</h5>
+      <span>{{appointment.preferredDate | date:'EEEE d LLL yyyy' }}</span>
+      <h5>Preferred Time</h5>
+      <span>{{appointment.preferredDate | date:'hh:mm aa'}}</span>
+      <h5>Phone Number</h5>
+      <span>{{user.phone}}</span>
+      <h5>Doctor's Name</h5>
+      <span>{{doctor.firstName}} {{doctor.lastName}}</span>
+      <h5>Medical Report</h5>
+      <h5>Upload Report</h5>
+      <h4>PAYMENT DETAILS</h4>
+      <h5>Amount</h5>
+      <span>30$ for 30mins</span>
+  </div>
+
+  <div class="book-registration-column">
+      <button class="btn btn-primary" (click)="reserveAppointment()">Pagar</button>
+    </div>

@@ -1,0 +1,35 @@
+
+.md-perspective, .md-perspective body {	height: 100%;	overflow: hidden;}
+.md-close{background:url(../../images/close-icon.png) no-repeat left top; text-indent:-9999px; cursor:pointer; border:none; border-radius:0; width:26px; height:26px; top:19px; right:18px; position:absolute;}
+.md-modal { background:rgba(0,0,0,0.8); position: fixed;  top:0; left:0; z-index: 2000; width:100%; height:100%; visibility: hidden; }
+.md-effect-5 .md-content{width: 74%; max-width: 1180px; min-width: 320px; height: auto; position:relative; top: 50%; left: 50%; z-index:9999;}
+.md-show {visibility: visible;}
+.md-overlay {position: fixed; width: 100%; height: 100%; visibility: hidden; top: 0; left: 0; z-index: 1000; opacity: 0; background: rgba(143,27,15,0.8); -webkit-transition: all 0.3s; -moz-transition: all 0.3s; transition: all 0.3s; }
+.md-show ~ .md-overlay {opacity: 1;	visibility: visible;}
+.md-content button {display: block;	margin: 0 auto;	font-size: 0.8em;}
+
+/* Effect 5: fall */
+/*.md-effect-5.md-modal {
+	-webkit-perspective: 1300px;
+	-moz-perspective: 1300px;
+	perspective: 1300px;
+}*/
+
+.md-effect-5 .md-content {
+	-webkit-transform:translateY(-50%) translateX(-50%); 
+	-moz-transform:translateY(-50%) translateX(-50%); 
+	-ms-transform:translateY(-50%) translateX(-50%); 
+	transform:translateY(-50%) translateX(-50%); 
+	opacity: 0;
+}
+
+.md-show.md-effect-5 .md-content {
+	-webkit-transition: all 0.3s ease-in;
+	-moz-transition: all 0.3s ease-in;
+	transition: all 0.3s ease-in;
+	-webkit-transform:translateY(-50%) translateX(-50%);
+	-moz-transform:translateY(-50%) translateX(-50%);
+	-ms-transform:translateY(-50%) translateX(-50%);
+	transform:translateY(-50%) translateX(-50%); 
+	opacity: 1;
+}

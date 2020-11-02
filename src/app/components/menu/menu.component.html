@@ -1,0 +1,35 @@
+
+  <div id="pm_layout_wrapper" class="pm-full-mode">
+
+  <header class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <div class="pm-header-logo-container">
+                    <a [routerLink]="['/home']">
+                        <img src="../assets/images/logo.png" class="img-responsive pm-header-logo" alt=""></a>
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-12">
+                <div class="video-consultation" *ngIf="!isLogged">
+                    <a [routerLink]="['/registeruser']" class="signup-btn">SIGN UP</a>
+                    <a [routerLink]="['/login']" class="signin-btn">SIGN IN</a>
+                </div>
+                <div class="video-consultation" *ngIf="isLogged">
+                  <a [routerLink]="['/login']" class="signin-btn" (click)="logout()">LOG OUT</a>
+              </div>
+                <div class="main-menu">
+                    <ul class="menu">
+                        <li><a class="" [routerLink]="['/home']">Home</a></li>
+                        <li *ngIf="!isDoctor && isLogged"><a [routerLink]="['/userpanel']" class="">Me</a></li>
+                        <li *ngIf="isDoctor && isLogged"><a [routerLink]="['/doctorpanel']" class="">Me</a></li>
+                        <li><a class="" [routerLink]="['/about-us']">About Us</a></li>
+                        <li><a class="" [routerLink]="['/videoconsultation']">Video Consultation</a></li>
+                        <li><a class="" [routerLink]="['/benefits']">Benefits</a></li>
+                        <li><a class="" [routerLink]="['/contact-us']">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

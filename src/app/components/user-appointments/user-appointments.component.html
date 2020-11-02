@@ -1,0 +1,49 @@
+<!-- <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Doctor's Information</th>
+        <th scope="col">My Medical Report</th>
+        <th scope="col">Booking Schedule</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let appointment of appointments">
+        <th scope="row">1</th>
+        <td>
+            <p>DR. {{appointment.doctor.firstName}} {{appointment.doctor.lastName}}</p>
+        </td>
+        <td>---</td>
+        <td>
+            <p>Date {{ appointment.preferredDate | date:'EEEE d LLL yyyy' }}</p>
+            <p>Time {{ appointment.preferredDate | date:'hh:mm aa' }} - {{ appointment.endAppoinment | date:'hh:mm aa' }}</p>
+        </td>
+      </tr>
+    </tbody>
+  </table> -->
+
+  <div class="container">
+    <div class="list-appointment" *ngFor="let appointment of appointments">
+      <div class="image">
+        <img src="{{appointment.doctor.imgProfile | imageProfile}}"  alt="...">
+      </div>
+      <div class="info-doctor">
+        <h4>DR. {{appointment.doctor.firstName}} {{appointment.doctor.lastName}}</h4>
+        <h5 class="specialitation">Plastic Surgeon & Cosmetic Surgeon</h5>
+        <p>MS (Gen Surgery), MCG, DNB (Plastic Surgery)Bangalore, Karmataca</p>
+        <span>$50 for 30 mins</span>
+      </div>
+      <div class="medical-report">
+        <h4>MEDICAL REPORT</h4>
+        <p *ngFor="let medicalReport of appointment.medicalReports">{{medicalReport.reportName}}</p>
+      </div>
+      <div class="schedule">
+        <h4>BOOKING SCHEDULE</h4>
+        <p>Date <span>{{ appointment.preferredDate | date:'EEEE d LLL yyyy' }}</span></p>
+        <p>Time <span>{{ appointment.preferredDate | date:'hh:mm aa' }} - {{ appointment.endAppoinment | date:'hh:mm aa' }}</span></p>
+      </div>
+      <div class="footer">
+        <button class="btn btn-primary" *ngIf="!appointment.isPassed" (click)="openConfence(appointment)">Start Video Consultation</button>
+      </div>
+    </div>
+  </div>

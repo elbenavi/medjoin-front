@@ -1,0 +1,166 @@
+<!-- <h1>Register User</h1>
+
+<form  [formGroup]="formRegister" (ngSubmit)="save()">
+    <div class="form-group">
+        <label for="exampleInputEmail1">Your Name</label>
+        <input type="name" formControlName="firstName" class="form-control" id="exampleInputname1" aria-describedby="nameHelp">
+        <small id="nameIdHelp1" class="form-text text-muted" *ngIf="nameInvalid">Required</small>  
+      </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <small id="nameIdHelp1" class="form-text text-muted" *ngIf="emailInvalid">Required</small>  
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" formControlName="password" class="form-control" id="exampleInputPassword1">
+      <small id="nameIdHelp" class="form-text text-muted" *ngIf="passwordInvalid">Required</small>  
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword2">Repeat Password</label>
+        <input type="password" class="form-control" formControlName="password2" id="exampleInputPassword2">
+        <small id="nameIdHelp3" class="form-text text-muted" *ngIf="password2Invalid">password do not match</small> 
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Phone Number</label>
+        <input type="text" formControlName="ext" class="form-control" id="extInputEmail1" aria-describedby="extHelp">
+        <small id="nameIdHelp1" class="form-text text-muted" *ngIf="extInvalid">Required</small>  
+      </div>
+      <div class="form-group">
+        <input type="text" formControlName="phone" class="form-control" id="exampleInputphone1" aria-describedby="phoneHelp">
+        <small id="nameIdHelp1" class="form-text text-muted" *ngIf="phoneInvalid">Required</small>  
+      </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form> -->
+
+<div class="pm-column-container pm-parallax-panel"
+  style="background-color: #fff; background-image: url(assets/images/innerpabeTitle-bg.jpg); background-position: 0 top"
+  data-stellar-background-ratio="0.5" data-stellar-vertical-offset="0">
+  <div class="container">
+    <div class="innerpageTitle-panel">
+      <h2>SIGN UP</h2>
+      <p>Sign Up as a User or Doctor</p>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="signup-panel">
+    <h2>Sign Up - <span>New User</span></h2>
+    <div class="row">
+      <div class="col-lg-6 signup-left">
+        <form class="signup-form clearfix" [formGroup]="formRegister" (ngSubmit)="save()">
+          <div class="first-name input-form">
+            <label><span class="red">*</span> First Name</label>
+            <input class="required alphanumwithspc input-text" formControlName="firstName" data-val="true"
+              data-val-required="First name is required" id="strFirstName" maxlength="50" name="strFirstName"
+              next="strLastName" placeholder="Enter First Name" tabindex="1" type="text" value="" />
+              <span class="field-validation-valid" data-valmsg-for="strUserName" *ngIf="nameInvalid" data-valmsg-replace="true">Required</span>
+          </div>
+          <div class="last-name input-form">
+            <label><span class="red">*</span> Last Name</label>
+            <input formControlName="lastName" class="required alphanumwithspc input-text" data-val="true" data-val-required="Last name is required"
+              id="strLastName" maxlength="50" name="strLastName" next="strEmail" placeholder="Enter Last Name"
+              tabindex="2" type="text" value="" />
+              <span class="field-validation-valid" data-valmsg-for="strUserName" *ngIf="lastNameInvalid" data-valmsg-replace="true">Required</span>
+          </div>
+          <div class="input-form">
+            <label><span class="red">*</span> Your Email</label>
+            <input formControlName="email" class="required emailid input-text" data-val="true"
+              data-val-email="The strEmail field is not a valid e-mail address."
+              data-val-regex="Please enter correct email"
+              data-val-regex-pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}" data-val-required="Email is required"
+              id="strEmail" maxlength="50" name="strEmail" next="lgTimeZoneId" placeholder="Enter Your Email ID"
+              tabindex="3" type="text" value="" />
+              <span class="field-validation-valid" data-valmsg-for="strUserName" *ngIf="emailInvalid" data-valmsg-replace="true">Required</span>
+              <span class="field-validation-valid" data-valmsg-for="strUserName" *ngIf="emialValid" data-valmsg-replace="true">Email Invalid ex: sample123@domail.com</span>
+          </div>
+          <div class="input-form">
+            <label><span class="red">*</span> Choose Password</label>
+            <input formControlName="password" class="required input-text" id="strPassword" maxlength="255" name="strPassword"
+              next="strConfirmPassword" placeholder="Enter Password" tabindex="5" type="password" />
+              <span class="field-validation-valid" data-valmsg-for="strUserName" *ngIf="passwordInvalid" data-valmsg-replace="true">Required</span>
+          </div>
+          <div class="input-form">
+            <label><span class="red">*</span> Re-enter Password</label>
+            <input formControlName="password2" class="required input-text" id="strConfirmPassword" maxlength="255" name="strConfirmPassword"
+              next="lgCountryId" placeholder="Re-enter Password" tabindex="6" type="password" />
+              <span class="field-validation-valid" data-valmsg-for="strUserName" *ngIf="password2Invalid" data-valmsg-replace="true">Required</span>
+          </div>
+          <div class="input-select">
+            <label><span class="red">*</span> Country</label>
+            <select class="required country-select chosen" data-val="true"
+              data-val-number="The field lgCountryId must be a number." id="lgCountryId" name="lgCountryId"
+              next="strMobileNumber" tabindex="7">
+              <option value="">--Select--</option>
+            </select>
+
+          </div>
+          <!-- <div class="input-form">
+            <label><span class="red">*</span> Mobile Number</label>
+
+
+            <input class="required numwospc input-text" data-val="true"
+              data-val-phone="The strMobileNumber field is not a valid phone number."
+              data-val-required="Mobile no is required" id="strMobileNumber" maxlength="15" name="strMobileNumber"
+              next="blTermsOfUse" placeholder="Mobile Number" tabindex="8" type="text" value="" />
+
+            
+
+          </div> -->
+          <div class="first-name input-form">
+            <label><span class="red">*</span>Extension</label>
+            <input class="required alphanumwithspc input-text" formControlName="ext" data-val="true"
+              data-val-required="First name is required" id="strFirstName" maxlength="50" name="strextension"
+              next="strMobileNumber" placeholder="Extension" tabindex="1" type="text" value="" />
+              <span class="field-validation-valid" data-valmsg-for="strUserName" *ngIf="extInvalid" data-valmsg-replace="true">Required</span>
+          </div>
+          <div class="last-name input-form">
+            <label><span class="red">*</span> Mobile Numbe</label>
+            <input formControlName="phone" class="required alphanumwithspc input-text" data-val="true" data-val-required="Last name is required"
+              id="strMobileNumber" maxlength="50" name="strMobileNumber" next="strEmail" placeholder="Enter Last Name"
+              tabindex="2" type="text" value="" />
+              <span class="field-validation-valid" data-valmsg-for="strUserName" *ngIf="phoneInvalid" data-valmsg-replace="true">Required</span>
+          </div>
+          <div class="input-form signup-checkbox">
+            <input class="input-check" data-val="true" data-val-required="The blTermsOfUse field is required."
+              id="blTermsOfUse" name="blTermsOfUse" next="btnSignUp" tabindex="9" type="checkbox" value="true" /><input
+              name="blTermsOfUse" type="hidden" value="false" />
+            <label>I Agree to the <a href="#">Terms of Use</a></label>
+          </div>
+          <div class="signup-now clearBoth">
+            <span class="field-validation-valid"></span>
+            <input type="submit" class="signupnow-btn" value="Sign Up Now" name="" id="btnSignUp" tabindex="10">
+          </div>
+          <div class="signupdoctor clearBoth">
+            <span class="field-validation-valid" data-valmsg-for="ModelStateError" data-valmsg-replace="true"></span>
+            <input type="button" class="signupdoctor-btn" value="You are Doctor?" [routerLink]="['/registerdoctor']" name="" id="btnSignUp" tabindex="10">
+          </div>
+        </form>
+      </div>
+      <div class="col-lg-6 signup-right">
+        <div class="signup-benefit">
+          <h3>Benefits to Sign Up</h3>
+          <ul class="benefit-list">
+            <li>
+              <h4>Consultation Anytime & Anywhere</h4>
+              <p>Upload your Medical reports and share your health issues with our Doctors online. Every health issue is
+                answered by our expert MDs.</p>
+              <p>Our Doctors answer your queries 24/7.</p>
+            </li>
+            <li>
+              <h4>Expats & Travellers</h4>
+              <p>The most tiring thing for expats and travellers is to get access to doctors.</p>
+              <p>Our doctors specifically address your needs in every possible way.</p>
+            </li>
+            <li>
+              <h4>Compare & Save Cost</h4>
+              <p>Compare the consultation fees of doctors and make it happen.</p>
+              <p>No need to pay travel expenses for Expert advice and Consultation.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

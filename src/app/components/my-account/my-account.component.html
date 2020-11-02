@@ -1,0 +1,20 @@
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Consultation Details</th>
+        <th scope="col">Date</th>
+        <th scope="col">Duration</th>
+        <th scope="col">Invoice Ammount</th>
+        <th scope="col">Payment Mode</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let appointment of appointments">
+        <td>DR. {{appointment.doctor.firstName}} {{appointment.doctor.lastName}} </td>
+        <td>{{ appointment.preferredDate | date:'EEEE d LLL yyyy' }}</td>
+        <td>{{ appointment.preferredDate | date:'hh:mm aa' }} - {{ appointment.endAppoinment | date:'hh:mm aa' }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

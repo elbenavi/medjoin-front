@@ -1,0 +1,184 @@
+
+<!-- <div>
+    <h3>Doctor's Profile</h3>
+    <div *ngIf="doctor">
+        <img [src]="'http://localhost:5000/resources/files/' + doctor.medicalDetail.urlLicenseCertificate" alt="">
+        <p>{{ doctor.firstName }} {{doctor.lastName}}</p>
+        <p>{{doctor.especialistation}}</p>
+        <p>{{doctor.tag}}</p>
+        <h3>Consultation Charges</h3>
+        <p> 
+            The video COnsultation charge of {{doctor.rate}}$ for 30 min can be paid online
+        </p>
+        <p> 
+            <span *ngFor="let tag of doctor.tags">{{tag}}</span>
+        </p>
+        <h3>Timing Slot</h3>
+        <p *ngFor="let day of doctor.schedule">
+            {{day.day}} -- {{day.startTime}} - {{day.endTime}}
+        </p>
+    </div>
+</div> -->
+
+<div class="book-registration-column">
+  <div class="profile-modal">
+    <div class="imageprofile">
+      <!-- <img [src]="'http://localhost:5000/resources/files/' + doctor.medicalDetail.urlLicenseCertificate"  alt="..."> -->
+      <img src="{{doctor.imgProfile | imageProfile}}" alt="...">
+    </div>
+    <div class="info">
+      <h4 class="name">DR. {{ doctor.firstName }} {{doctor.lastName}}</h4>
+       <h5 class="specialitation">Plastic Surgeon & Cosmetic Surgeon</h5>
+      <p>MS (Gen Surgery), MCG, DNB (Plastic Surgery)Bangalore, Karmataca</p>
+    </div>
+  </div>
+
+  <div class="schedule">
+    <h4>TIMING SLOTS</h4>
+    <div>
+      <p><span class="day">Monday</span><span class="time">9:30am-5:30pm</span></p>
+      <p><span class="day">Tuesday</span><span class="time">9:30am-5:30pm</span></p>
+      <p><span class="day">Wednesday</span><span class="time">9:30am-5:30pm</span></p>
+      <p><span class="day">Thursday</span><span class="time">9:30am-5:30pm</span></p>
+      <p><span class="day">Friday</span><span class="time">9:30am-5:30pm</span></p>
+    </div>
+  </div>
+
+  <div class="charges">
+    <h4>CONSULTATION CHARGE</h4>
+    <div>
+      The Video Consultation charge of <span>$50 for 30 min</span>
+    </div>
+  </div>
+</div>
+
+<!-- <div>
+  <h2>Appoiment</h2>
+    <form [formGroup]="formRegister" (ngSubmit)="save()">
+        <div class="form-group" >
+          <label for="preferedDayId">Prefered day</label>
+          <input type="date" formControlName="preferredDate"  class="form-control" id="preferedDayId" aria-describedby="prefereddayHelp">
+          <small id="nameIdHelp1" class="form-text text-muted" *ngIf="preferedDayInvalid">Required</small>  
+        </div>
+        <div class="form-group">
+          <label for="preferedTimeId">Prefered time</label>
+          <input type="time" class="form-control" formControlName="preferredTime" id="preferedTimeId" value="08:00:00" step="300">
+          <small id="nameIdHelp1" class="form-text text-muted" *ngIf="preferedTimeInvalid" >Required</small>  
+        </div>
+        <div class="form-group">
+          <label for="minutesId">how many minutes</label>
+          <input type="number" class="form-control" formControlName="minutes" id="minutesId" value="30" min="30" max="120" step="30">
+          <small id="nameIdHelp1" class="form-text text-muted" *ngIf="minutesTimeInvalid" >Required</small>  
+        </div>
+        <div class="form-group">
+            <label for="reasonId">Reason</label>
+            <textarea formControlName="reason" name="reasonId" id="reasonId" cols="30" rows="10"></textarea>
+            <small id="nameIdHelp1" class="form-text text-muted" *ngIf="reasonInvalid">Required</small>  
+        </div>
+        <div>
+            <div class="form-group">
+              <label for="uploadId">Upload File</label>
+              <input type="file" formControlName="file" (change)="onFileSelect($event)"  class="form-control" id="uploadId">
+          </div>
+          <div class="form-group">
+              <label for="fileNameId">Name file</label>
+              <input type="text" class="form-control" formControlName="fileName" id="fileNameId">
+          </div>
+          <button class="btn btn-primary" (click)="uploadFile()">Upload</button>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Report/Document Name</th>
+                <th scope="col">File Name</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let medicalReport of medicalReports">
+                <td>{{medicalReport.reportName}}</td>
+                <td>{{medicalReport.urlResource}}</td>
+                <td><button class="btn btn-danger" (click)="deleteReport(medicalReport)">Remove</button></td>
+              </tr>
+            </tbody>
+          </table>          
+        </div>
+        <button type="submit" class="btn btn-danger">Book Now</button>
+      </form>
+</div> -->
+
+<div class="book-registration-form">
+    <div class="row">
+      <div class="col-lg-6 signup-left">
+        <form class="signup-form clearfix" [formGroup]="formRegister" (ngSubmit)="save()">
+          <div class="first-name input-form">
+            <label><span class="red">*</span> Prefered day</label>
+            <input class="required alphanumwithspc input-text" formControlName="preferredDate" (change)="validateDate()" data-val="true"
+              data-val-required="First name is required" id="strFirstName" maxlength="50" name="preferredDate"
+              next="strLastName" placeholder="preferred Date" tabindex="1" type="date" value="" />
+              <span class="field-validation-valid" data-valmsg-for="strUserName" *ngIf="preferedDayInvalid" data-valmsg-replace="true">Required</span>
+          </div>
+          <div class="last-name input-form">
+            <label><span class="red">*</span> Prefered time</label>
+            <input formControlName="preferredTime" class="required alphanumwithspc input-text" (change)="validateDateTime()" data-val="true" data-val-required="Last name is required"
+              id="preferredTime" maxlength="50" name="preferredTime" next="strEmail" placeholder="preferred Time"
+              tabindex="2" type="time" value="" />
+              <span class="field-validation-valid" data-valmsg-for="strUserName" *ngIf="preferedTimeInvalid" data-valmsg-replace="true">Required</span>
+          </div>
+          <div class="input-form">
+            <label><span class="red">*</span> how many minutes</label>
+            <input formControlName="minutes" class="required emailid input-text" data-val="true"
+              data-val-required="Email is required"
+              id="minutes" maxlength="50" name="minutes" next="lgTimeZoneId"
+              tabindex="3" type="number" value="30" min="30" max="120" step="30" />
+              <span class="field-validation-valid" data-valmsg-for="strUserName" *ngIf="minutesTimeInvalid" data-valmsg-replace="true">Required</span>
+          </div>
+          <div class="input-form">
+            <label><span class="red">*</span> Reason</label>
+            <textarea formControlName="reason" class="required input-text" id="reason" name="strPassword"
+              next="strConfirmPassword" placeholder="Enter reason" tabindex="5" style="height: 91px;" ></textarea>
+              <span class="field-validation-valid" data-valmsg-for="strUserName" *ngIf="reasonInvalid" data-valmsg-replace="true">Required</span>
+          </div>
+          <!-- <div class="input-form">
+            <label><span class="red">*</span> Upload File</label>
+            <input formControlName="file" class="required input-text" id="file" maxlength="255" name="file"
+              next="strConfirmPassword" placeholder="file" tabindex="6" type="file" />
+
+          </div>
+
+          <div class="input-form">
+            <label><span class="red">*</span> Name file</label>
+            <input formControlName="fileName" class="required input-text" id="fileName" maxlength="255" name="fileName"
+              next="yearsOfExperience" placeholder="Name file" tabindex="6" type="text" />
+
+          </div> -->
+
+          <div *ngIf="isLogin">
+            <button class="btn btn-primary" (click)="uploadMdicalReportModal()" type="button">Asociate Medical Reports</button>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">Report/Document Name</th>
+                  <th scope="col">File Name</th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let medicalReport of medicalReports; let i = index">
+                  <td>{{medicalReport.reportName}}</td>
+                  <td>{{medicalReport.urlResource}}</td>
+                  <td><button class="btn btn-danger" (click)="deleteReport(i)">Remove</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div *ngIf="!isLogin">
+            <h3>You cannot register appointments if you are not logged</h3>
+            <a [routerLink]="[ '/login']" class="btn btn-danger">Login</a>
+          </div>
+          <div class="signup-now clearBoth" *ngIf="isLogin && !user.isDoctor">
+            <span class="field-validation-valid"></span>
+            <input type="submit" class="signupnow-btn" value="Book Appointment" name="" id="btnSignUp" tabindex="10">
+          </div>
+        </form>
+</div>

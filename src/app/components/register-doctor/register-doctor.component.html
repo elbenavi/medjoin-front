@@ -1,0 +1,217 @@
+<!-- <h1>Register Doctor</h1>
+
+<form  [formGroup]="formRegister" (ngSubmit)="save()">
+    <h2>You Medjoin Doctor Account</h2>
+    <div class="form-group">
+        <label for="exampleInputEmail1">First Name</label>
+        <input type="name" formControlName="firstName" class="form-control" id="exampleInputfisrtname1" aria-describedby="nameHelp">
+        <small id="nameIdHelp1" class="form-text text-muted" *ngIf="firstNameInvalid">Required</small>  
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Last Name</label>
+        <input type="name" formControlName="lastName" class="form-control" id="exampleInputlastname1" aria-describedby="nameHelp">
+        <small id="nameIdHelp1" class="form-text text-muted" *ngIf="lastNameInvalid">Required</small>  
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <small id="nameIdHelp1" class="form-text text-muted" *ngIf="emailInvalid">Required</small>  
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" formControlName="password" class="form-control" id="exampleInputPassword1">
+      <small id="nameIdHelp" class="form-text text-muted" *ngIf="passwordInvalid">Required</small>  
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword2">Repeat Password</label>
+        <input type="password" class="form-control" formControlName="password2" id="exampleInputPassword2">
+        <small id="nameIdHelp3" class="form-text text-muted" *ngIf="password2Invalid">password do not match</small> 
+      </div>
+      <h2>Medical Qualifications & Experiense</h2>
+      <div class="form-group">
+        <label for="professionalDesignation1">professional Designation</label>
+        <input type="text" formControlName="professionalDesignation" class="form-control" id="professionalDesignation1" aria-describedby="professionalDesignationHelp">
+        <small id="professionalDesignationHelp1" class="form-text text-muted" *ngIf="professionalDesignationInvalid">Required</small>  
+    </div>
+    <div class="form-group">
+        <label for="yearsOfExperience1">Years Of Experience</label>
+        <input type="number" formControlName="yearsOfExperience" class="form-control" id="yearsOfExperience1" aria-describedby="yearsOfExperienceHelp">
+        <small id="yearsOfExperienceIdHelp1" class="form-text text-muted" *ngIf="yearsOfExperienceInvalid">Required</small>  
+    </div>
+    <div class="form-group">
+        <label for="academicQualificatinDetails1">Academic Qualificatin Details</label>
+        <input type="text" formControlName="academicQualificatinDetails" class="form-control" id="academicQualificatinDetails1" aria-describedby="nameHelp">
+        <small id="nameIdHelp1" class="form-text text-muted" *ngIf="academicQualificatinDetailsInvalid">Required</small>  
+    </div>
+    <div class="form-group">
+        <label for="medicalLicenseNumber1">Medical License Number</label>
+        <input type="number" formControlName="medicalLicenseNumber" class="form-control" id="medicalLicenseNumber1" aria-describedby="medicalLicenseNumberHelp">
+        <small id="nameIdHelp1" class="form-text text-muted" *ngIf="medicalLicenseNumberInvalid">Required</small>  
+    </div>
+    <div class="form-group">
+        <label for="university1">Board/University</label>
+        <input type="text" formControlName="university" class="form-control" id="university1" aria-describedby="universityHelp">
+        <small id="nameIdHelp1" class="form-text text-muted" *ngIf="universityInvalid">Required</small>  
+    </div>
+    <div class="form-group">
+        <label for="urlLicenseCertificate1">Upload License Certificate</label>
+        <input type="file" (change)="onFileSelect($event)" formControlName="urlLicenseCertificate" class="form-control" id="urlLicenseCertificate1" aria-describedby="urlLicenseCertificateHelp">
+        <small id="nameIdHelp1" class="form-text text-muted" *ngIf="urlLicenseCertificateInvalid">Required</small>  
+    </div>
+      <h2>Location & Contact Details</h2>
+      <div class="form-group">
+        <label for="extInputEmail1">Phone Number</label>
+        <input type="text" formControlName="ext" class="form-control" id="extInputEmail1" aria-describedby="extHelp">
+        <small id="nameIdHelp1" class="form-text text-muted" *ngIf="extInvalid">Required</small>  
+      </div>
+      <div class="form-group">
+        <input type="text" formControlName="phone" class="form-control" id="exampleInputphone1" aria-describedby="phoneHelp">
+        <small id="nameIdHelp1" class="form-text text-muted" *ngIf="phoneInvalid">Required</small>  
+      </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form> -->
+
+  <div class="pm-column-container pm-parallax-panel"
+  style="background-color: #fff; background-image: url(assets/images/innerpabeTitle-bg.jpg); background-position: 0 top"
+  data-stellar-background-ratio="0.5" data-stellar-vertical-offset="0">
+  <div class="container">
+    <div class="innerpageTitle-panel">
+      <h2>SIGN UP</h2>
+      <p>Sign Up as a User or Doctor</p>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="signup-panel">
+    <h2>Sign Up - <span>New Doctor</span></h2>
+    <div class="row">
+      <div class="col-lg-6 signup-left">
+        <form class="signup-form clearfix" [formGroup]="formRegister" (ngSubmit)="save()">
+          <div class="first-name input-form">
+            <label><span class="red">*</span> First Name</label>
+            <input class="required alphanumwithspc input-text" formControlName="firstName" data-val="true"
+              data-val-required="First name is required" id="strFirstName" maxlength="50" name="strFirstName"
+              next="strLastName" placeholder="Enter First Name" tabindex="1" type="text" value="" />
+              <span class="field-validation-valid" data-valmsg-for="strUserName" *ngIf="firstNameInvalid" data-valmsg-replace="true">Required</span>
+          </div>
+          <div class="last-name input-form">
+            <label><span class="red">*</span> Last Name</label>
+            <input formControlName="lastName" class="required alphanumwithspc input-text" data-val="true" data-val-required="Last name is required"
+              id="strLastName" maxlength="50" name="strLastName" next="strEmail" placeholder="Enter Last Name"
+              tabindex="2" type="text" value="" />
+              <span class="field-validation-valid" data-valmsg-for="strUserName" *ngIf="lastNameInvalid" data-valmsg-replace="true">Required</span>
+          </div>
+          <div class="input-form">
+            <label><span class="red">*</span> Your Email</label>
+            <input formControlName="email" class="required emailid input-text" data-val="true"
+              data-val-email="The strEmail field is not a valid e-mail address."
+              data-val-regex="Please enter correct email"
+              data-val-regex-pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}" data-val-required="Email is required"
+              id="strEmail" maxlength="50" name="strEmail" next="lgTimeZoneId" placeholder="Enter Your Email ID"
+              tabindex="3" type="text" value="" />
+              <span class="field-validation-valid" data-valmsg-for="strUserName" *ngIf="emailInvalid" data-valmsg-replace="true">Required</span>
+          </div>
+          <div class="input-form">
+            <label><span class="red">*</span> Choose Password</label>
+            <input formControlName="password" class="required input-text" id="strPassword" maxlength="255" name="strPassword"
+              next="strConfirmPassword" placeholder="Enter Password" tabindex="5" type="password" />
+              <span class="field-validation-valid" data-valmsg-for="strUserName" *ngIf="passwordInvalid" data-valmsg-replace="true">Required</span>
+          </div>
+          <div class="input-form">
+            <label><span class="red">*</span> Re-enter Password</label>
+            <input formControlName="password2" class="required input-text" id="strConfirmPassword" maxlength="255" name="strConfirmPassword"
+              next="strConfirmPassword" placeholder="Re-enter Password" tabindex="6" type="password" />
+              <span class="field-validation-valid" data-valmsg-for="strUserName" *ngIf="password2Invalid" data-valmsg-replace="true">Required</span>
+          </div>
+
+          <div class="input-form">
+            <label><span class="red">*</span> Professional Designation</label>
+            <input formControlName="professionalDesignation" class="required input-text" id="professionDesignation" maxlength="255" name="professionDesignation"
+              next="yearsOfExperience" placeholder="Professional Designation" tabindex="6" type="text" />
+              <span class="field-validation-valid" data-valmsg-for="strUserName" *ngIf="professionalDesignationInvalid" data-valmsg-replace="true">Required</span>
+          </div>
+
+          <div class="input-form">
+            <label><span class="red">*</span> Years Of Experience</label>
+            <input formControlName="yearsOfExperience" class="required input-text" id="yearsOfExperience" maxlength="255" name="yearsOfExperience"
+              next="lgCountryId" placeholder="Years Of Experience" tabindex="6" type="number" />
+              <span class="field-validation-valid" data-valmsg-for="strUserName" *ngIf="yearsOfExperienceInvalid" data-valmsg-replace="true">Required</span>
+          </div>
+
+          <div class="input-form">
+            <label><span class="red">*</span> Academic Qualification Details</label>
+            <textarea formControlName="academicQualificatinDetails" class="required input-text" id="academicQualificatinDetails" maxlength="255" name="academicQualificatinDetails"
+              next="lgCountryId" style="height: 91px;" placeholder="Academic Qualification Details" tabindex="6"></textarea>
+              <span class="field-validation-valid" data-valmsg-for="strUserName" *ngIf="academicQualificatinDetailsInvalid" data-valmsg-replace="true">Required</span>
+          </div>
+
+          <div class="input-form">
+            <label><span class="red">*</span> Medical License Number</label>
+            <input formControlName="medicalLicenseNumber" class="required input-text" id="medicalLicenseNumber" maxlength="255" name="medicalLicenseNumber"
+              next="lgCountryId" placeholder="Years Of Experience" tabindex="6" type="number" />
+              <span class="field-validation-valid" data-valmsg-for="strUserName" *ngIf="medicalLicenseNumberInvalid" data-valmsg-replace="true">Required</span>
+          </div>
+          <div class="input-form">
+            <label><span class="red">*</span> Board/University</label>
+            <input formControlName="university" class="required input-text" id="university" maxlength="255" name="university"
+              next="yearsOfExperience" placeholder="Professional Designation" tabindex="6" type="text" />
+              <span class="field-validation-valid" data-valmsg-for="strUserName" *ngIf="universityInvalid" data-valmsg-replace="true">Required</span>
+          </div>
+          <div class="input-form">
+            <label><span class="red">*</span> Upload License Certificate</label>
+            <input formControlName="urlLicenseCertificate" (change)="onFileSelect($event)" class="required input-text" id="urlLicenseCertificate" maxlength="255" name="urlLicenseCertificate"
+              next="yearsOfExperience" placeholder="Professional Designation" tabindex="6" type="file" />
+          </div>
+          <div class="first-name input-form">
+            <label><span class="red">*</span>Extension</label>
+            <input class="required alphanumwithspc input-text" formControlName="ext" data-val="true"
+              data-val-required="First name is required" id="strFirstName" maxlength="50" name="strextension"
+              next="strMobileNumber" placeholder="Extension" tabindex="1" type="text" value="" />
+              <span class="field-validation-valid" data-valmsg-for="strUserName" *ngIf="extInvalid" data-valmsg-replace="true">Required</span>
+          </div>
+          <div class="last-name input-form">
+            <label><span class="red">*</span> Mobile Numbe</label>
+            <input formControlName="phone" class="required alphanumwithspc input-text" data-val="true" data-val-required="Last name is required"
+              id="strMobileNumber" maxlength="50" name="strMobileNumber" next="strEmail" placeholder="Enter Last Name"
+              tabindex="2" type="text" value="" />
+              <span class="field-validation-valid" data-valmsg-for="strUserName" *ngIf="phoneInvalid" data-valmsg-replace="true">Required</span>
+          </div>
+          <div class="input-form signup-checkbox">
+            <input class="input-check" data-val="true" data-val-required="The blTermsOfUse field is required."
+              id="blTermsOfUse" name="blTermsOfUse" next="btnSignUp" tabindex="9" type="checkbox" value="true" /><input
+              name="blTermsOfUse" type="hidden" value="false" />
+            <label>I Agree to the <a href="#">Terms of Use</a></label>
+          </div>
+          <div class="signup-now clearBoth">
+            <span class="field-validation-valid" ></span>
+            <input type="submit" class="signupnow-btn" value="Sign Up Now" name="" id="btnSignUp" tabindex="10">
+          </div>
+        </form>
+      </div>
+      <div class="col-lg-6 signup-right">
+        <div class="signup-benefit">
+          <h3>Benefits to Sign Up</h3>
+          <ul class="benefit-list">
+            <li>
+              <h4>Consultation Anytime & Anywhere</h4>
+              <p>Upload your Medical reports and share your health issues with our Doctors online. Every health issue is
+                answered by our expert MDs.</p>
+              <p>Our Doctors answer your queries 24/7.</p>
+            </li>
+            <li>
+              <h4>Expats & Travellers</h4>
+              <p>The most tiring thing for expats and travellers is to get access to doctors.</p>
+              <p>Our doctors specifically address your needs in every possible way.</p>
+            </li>
+            <li>
+              <h4>Compare & Save Cost</h4>
+              <p>Compare the consultation fees of doctors and make it happen.</p>
+              <p>No need to pay travel expenses for Expert advice and Consultation.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

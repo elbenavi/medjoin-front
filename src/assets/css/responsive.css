@@ -1,0 +1,273 @@
+@media (min-width:768px) and (max-width:991px){
+   .container{width:auto; padding:0 15px;}
+   img{max-width:100%;}
+   .pm-caption{margin-left:0;}
+   .menu li{padding:0 5px;}
+   .menu li a{font-size:13px;}
+   .footer-logo{width:40%;}
+   .footer-copyright{width:60%; text-align:right;}
+   .footer-copyright p{text-align:right;}
+   .footer-social{width:100%;}
+   .stepappointment p{padding-left:0; padding-right:0;}
+   .doctorplatform p{padding-left:0; padding-right:0;}
+   
+   .consultation-head .consultationtitle-box{width:100%; padding-bottom:10px;}
+   .consultationtitle .consultationtitle-img{margin-top:0;}
+   .consultationtitle-detail h3{font-size:18px;}
+   .doctor-detail .doctordetail-btn a{font-size:12px; padding:0 8px;}
+   .videoconsultation-left{width:39%;}
+   .videoconsultation-right{width:61%;}
+   .boockAppointment-form .input-field label{width:35%; line-height:18px; padding-top:10px;}
+   .boockAppointment-form .input-field input, .boockAppointment-form .input-field input.input-text, .boockAppointment-form .input-field input.inputfile, .boockAppointment-form .input-field .input-phoneno{width:65%;}
+   .boockAppointment-form .input-field textarea, .appointmentform-btn, .boockAppointment-form .input-field .inputfile, .boockAppointment-form .report-document{width:65%;}
+   .boockAppointment-form .input-field .report-document .input-upload{margin-left:5px;}
+   .booking-information{width:61%;}
+   .creditcard-inofrmation{width:100%; padding-top:25px;}
+   .bookinginformation, .boockAppointment{min-height:825px;}
+   .signupDoctor-form .input-field.col-lg-6{width:100%;}
+   .myappointment-title li a{font-size:15px; padding-left:48px;}
+   .myappointment-title li a.appointment{background-position:10px 20px;}
+   .myappointment-title li a.medical-rep{background-position:11px 20px;}
+   .myappointment-title li a.myaccount{background-position:12px 20px;}
+   .myappointment-title li a.myprofile{background-position:11px 13px;}
+   .uploadreport-form .input-field{width:100%; padding-bottom:12px;}
+   .uploadreport-panel{padding-bottom:5px;}
+   .medicalreport-table tr td, .medicalreport-table tr th{padding-left:5px;}
+   .view-report, .delete-report{margin:0 2px;}
+   .account-table tr th, .account-table tr td{padding-left:5px;}
+   .doctor-appointment .myappointment-title li a{font-size:14px; padding-left:43px;}
+   .videoconversion-body{min-height:486px;}
+   .videoChat-body .videoChatbody-panel{max-height:426px;}
+   .videoChat-body{min-height:426px;}
+   .videoconversion-right .inputchat-panel input{background:url("../../images/chat-icon.png") no-repeat scroll 97% center, url("../../images/chat-border.png") no-repeat scroll 83% center #ffffff;}
+   .stepappointment h3{font-size:20px;}
+   .md-effect-5 .md-content{width:90%;}
+   .reporttable-panel{width:100%;}
+   .myprofilem-detail .profile-timingSolt .slots-list li{display:block; width:100%;}
+    .start-videoconversion, .msg-videoconversion {width:500px;}
+    .videocalling-block {top:15px; transform:translateY(0px) translateX(-50%); -webkit-transform:translateY(0px) translateX(-50%); -ms-transform:translateY(0px) translateX(-50%);}
+        .videocalling-block .userblock .videoCall-img {height:122px; width:150px;}
+        .videocalling-block .yourblock .videoCall-img {height:122px; width:150px;}
+    .appointment-schedule-history .col-lg-2 {width:25%;}
+    .appointment-schedule-history .col-lg-4 {width:100%; text-align:right; padding-top:15px;}
+    .appointment-schedule-history .col-lg-4 audio {width:45%;}
+}
+@media (min-width:992px) and (max-width:1024px){
+   .container{width:960px;}
+   img{max-width:100%;}
+   .pm-caption{margin-left:300px;}
+   .consultationtitle .consultationtitle-detail{width:84%;}
+   .consultationtitle-detail h3{font-size:19px;}
+   .boockAppointment, .bookinginformation, .creditcardinofrmation{min-height:785px;}
+   .card-radio .radio-block{width:45%;}
+   .uploadreport-form .input-text{width:57%;}
+   .uploadreport-form .input-file{width:54%;}
+   .doctor-appointment .uploadreport-form .input-text{width:57%;}
+   .doctor-appointment .uploadreport-form .input-text.from-date{width:30%;}
+   .myappointment-title li a{padding-left:57px;}
+    .appointment-schedule-history .col-lg-4 audio {width:85%;}
+}
+@media (min-width:1025px) and (max-width:1185px){
+   .container{width:996px;}
+   img{max-width:100%;}
+   .pm-caption{margin-left:400px;}
+   .consultationtitle .consultationtitle-detail{width:85%;}
+   .consultationtitle-detail h3{font-size:20px;}
+   .boockAppointment, .bookinginformation, .creditcardinofrmation{min-height:785px;}
+   .card-radio .radio-block{width:33.33%;}
+   .card-radio .radio-block label{font-size:13px;}
+   .uploadreport-form .input-text{width:57%;}
+   .uploadreport-form .input-file{width:54%;}
+   .doctor-appointment .uploadreport-form .input-text{width:57%;}
+   .doctor-appointment .uploadreport-form .input-text.from-date{width:30%;}
+   .appointment-schedule-history .col-lg-4 audio {width:85%;}
+}
+@media (max-width:767px){
+   .container{width:auto; padding:0 15px;}
+   img{max-width:100%;}
+   body{position:relative; height:100%;}
+   .main-menu{display:none;}
+   .slicknav_menu{display:block;}
+   .pm-caption{margin-left:0;}
+   .stepappointment h3{font-size:16px;}
+   .stepappointment p{padding-left:0; padding-right:0;}
+   .doctorplatform p{padding-left:0; padding-right:0;}
+   .footer-logo{width:40%;}
+   .footer-copyright{width:60%; text-align:right;}
+   .footer-copyright p{text-align:right;}
+   .footer-social{width:100%;}
+   .footerabout p{padding-right:0;}
+   .pm-caption-decription{font-size:20px;}
+   .pm-caption h1{font-size:30px;}
+   
+   .consultation-head .consultationtitle-box{width:100%; padding-bottom:10px;}
+   .consultationtitle .consultationtitle-img{margin-top:0;}
+   .consultationDoctor-list .doctorlist{width:100%;}
+   .videoconsultation-left{width:44%;}
+   .videoconsultation-right{width:56%;}
+   .boockAppointment, .videoconsultation-profile, .creditcardinofrmation{padding:15px;}
+   .boockAppointment-form .input-field label{width:40%; line-height:18px; padding-top:10px;}
+   .boockAppointment-form .input-field input, .boockAppointment-form .input-field input.input-text, .boockAppointment-form .input-field input.inputfile, .boockAppointment-form .input-field .input-phoneno{width:60%;}
+   .boockAppointment-form .input-field textarea, .appointmentform-btn, .boockAppointment-form .input-field .inputfile, .boockAppointment-form .report-document{width:60%;}
+   .booking-information{width:56%;}
+   .boockAppointment-form .input-field .report-document .input-text{width:100%;}
+   .boockAppointment-form .input-field .report-document .input-upload{margin-left:0; margin-top:7px;}
+   .reporttable-panel{width:100%;}
+   .creditcard-inofrmation{width:100%; padding-top:25px;}
+   .bookinginformation, .boockAppointment{min-height:825px;}
+    .signupDoctor-form .input-field.col-lg-6{width:100%;}
+	.myappointment-title li{width:50%; padding-bottom:8px;}
+	.myappointment-box .appointment-img{width:32.6%;}
+	.myappointment-box .appointment-title{width:67%; min-height:155px;}
+	.myappointment-box .appointment-report{width:50%; padding-left:0; padding-top:12px;}
+	.myappointment-box .appointment-schedule{width:50%; padding-top:12px;}
+	.uploadreport-form .input-field{width:100%; padding-bottom:12px;}
+   .uploadreport-panel{padding-bottom:5px;}
+   .medicalreport-table tr td, .medicalreport-table tr th{padding-left:5px;}
+   .view-report, .delete-report{margin:0 2px;}
+    .account-table tr th, .account-table tr td{padding-left:5px;}
+	.myprofilem-img{height:100px;}
+	.myprofilem-body .signupDoctor-form .information{padding:0 10px 15px;}
+	.myprofilem-body .signupDoctor-form .row{margin:0;}
+	.doctor-appointment .myprofilem-discript{min-height:155px; width:67%;}
+	.myappointmentBtn-panel a{margin-bottom:7px;}
+	.myappointmentBtn-panel{padding-bottom:0;}
+	.doctorprofile-form .information .input-field, .doctorprofile-form .information .input-select{padding-left:4px; padding-right:4px;}
+	.md-modal{position:absolute;}
+	.md-effect-5 .md-content{top:25px; width:96%;}
+	.profileDetail-panel .consult-charges{padding-right:0;}
+	.md-show.md-effect-5 .md-content{transform:translateZ(0px) rotateX(0deg) translateY(0px) translateX(-50%); -webkit-transform:translateZ(0px) rotateX(0deg) translateY(0px) translateX(-50%); -ms-transform:translateZ(0px) rotateX(0deg) translateY(0px) translateX(-50%);}
+}
+@media (min-width:480px) and (max-width:639px){
+	.pm-caption-decription{font-size:18px;}
+	.pm-caption h1{font-size:26px;}
+	.whymedjoin-left{width:100%; padding-bottom:15px;}
+	.whymedjoin-right{width:100%;}
+	.stepappointment-list{width:100%;}
+	.doctorplatform-box{width:100%; padding-bottom:15px;}
+	.areDoctor-left{width:100%;}
+	.areDoctor-right{width:100%;}
+	.footerabout-panel{width:100%; padding-bottom:15px;}
+	.quickcontact-panel{width:100%; padding-bottom:15px;}
+	.quicklink-panel{width:100%;}
+	.footer-logo{width:100%; text-align:center;}
+	.footer-copyright{width:100%;}
+	.social-link{text-align:center;}
+	
+	.videoconsultation-left{width:100%; padding-bottom:20px;}
+   .videoconsultation-right{width:100%;}
+   .boockAppointment-form .input-field label{width:100%; text-align:left; padding-top:0; padding-bottom:3px;}
+   .boockAppointment-form .input-field input, .boockAppointment-form .input-field input.input-text, .boockAppointment-form .input-field input.inputfile, .boockAppointment-form .input-field .input-phoneno{width:100%;}
+   .boockAppointment-form .input-field textarea, .appointmentform-btn, .boockAppointment-form .input-field .inputfile, .boockAppointment-form .report-document{width:100%;}
+   .booking-information{width:100%;}
+   .signup-left, .signup-right, .signupDoctor-left, .signupDoctor-right{width:100%; padding-bottom:20px;}
+   .signup-form{padding-left:0;}
+   .signin-left, .signin-right{width:100%;}
+   .myappointment-title li a{padding-left:58px;}
+   .myappointment-box .appointment-title{min-height:135px;}
+   .uploadreport-form label{width:100%;}
+   .uploadreport-form .input-file{width:65%;}
+   .medicalreportTable{overflow:auto;}
+   .medicalreportTable .medicalreport-table{width:800px;}
+   .medicalreport-table tr td, .medicalreport-table tr th{padding-left:5px;}
+   .view-report, .delete-report{margin:0 4px;}
+   .accountTable-inner{overflow:auto;}
+   .accountTable .account-table{width:750px;}
+   .myprofilem-img{width:30%;}
+   .myprofilem-discript{width:70%;}
+   .myprofilem-about{width:100%; padding-left:0; padding-top:12px;}
+   .myprofilem-discript p.emailcont{padding-top:12px;}
+   .signupDoctor-form .information{width:100%;}
+   .myprofilem-title{width:70%;}
+   .myprofilem-detail .profile-timingSolt{width:100%; padding-left:0; padding-top:12px;}
+   .myprofilem-detail .profile-timingSolt .slots-list li{width:100%; display:block;}
+   .myprofilem-header .myprofilem-title .appointment-time{padding-top:15px;}
+   .profileDetail-panel{padding-left:12px; padding-right:12px;}
+   
+}
+@media (max-width:479px){
+	.whymedjoin-left{width:100%; padding-bottom:15px;}
+	.whymedjoin-right{width:100%;}
+	.stepappointment-list{width:100%;}
+	.doctorplatform-box{width:100%; padding-bottom:15px;}
+	.areDoctor-left{width:100%;}
+	.areDoctor-right{width:100%;}
+	.footerabout-panel{width:100%; padding-bottom:15px;}
+	.quickcontact-panel{width:100%; padding-bottom:15px;}
+	.quicklink-panel{width:100%;}
+	.footer-logo{width:100%; text-align:center;}
+	.footer-copyright{width:100%; text-align:center;}
+	.footer-copyright p{text-align:center;}
+	.social-link{text-align:center;}
+	
+	.consultationtitle .consultationtitle-img{margin-top:12px;}
+	.consultationtitle .consultationtitle-detail{width:84%;}
+	.consultationtitle-detail h3{font-size:18px;}
+	.doctor-img{width:100%;}
+	.doctor-detail{padding-top:12px; padding-left:0; width:100%;}
+	.videoconsultation-left{width:100%; padding-bottom:20px;}
+   .videoconsultation-right{width:100%;}
+   .boockAppointment-form .input-field label{width:100%; text-align:left; padding-top:0; padding-bottom:3px;}
+   .boockAppointment-form .input-field input, .boockAppointment-form .input-field input.input-text, .boockAppointment-form .input-field input.inputfile, .boockAppointment-form .input-field .input-phoneno{width:100%;}
+   .boockAppointment-form .input-field textarea, .appointmentform-btn, .appointmentform-btn, .boockAppointment-form .input-field .inputfile, .boockAppointment-form .report-document{width:100%;}
+   .booking-information{width:100%;}
+   .card-radio .radio-block{width:33.33%;}
+   .card-radio .radio-block label{font-size:12px;}
+   .signup-left, .signup-right, .signupDoctor-left, .signupDoctor-right{width:100%; padding-bottom:20px;}
+   .signupDoctor-form .input-field{padding-left:0; padding-right:0;}
+   .signupDoctor-form .input-field.col-lg-5{padding-left:6px; }
+   .signupDoctor-form .input-select{padding-right:0; padding-left:0;}
+   .signupDoctor-form .row{padding-right:0;}
+   .signup-form{padding-left:0;}
+   .signupDoctor-panel h2{font-size:24px;}
+   .signin-left, .signin-right{width:100%;}
+   .signin-form, .signinright{padding-left:0;}
+   .myappointment-title li{width:100%; padding-bottom:8px;}
+	.myappointment-box .appointment-img{width:100%;}
+	.myappointment-box .appointment-title{width:100%; min-height:inherit; padding-left:0; padding-top:12px;}
+	.myappointment-box .appointment-report{width:100%; padding-left:0; padding-top:12px;}
+	.myappointment-box .appointment-schedule{width:100%; padding-top:12px; padding-left:0;}
+	.myappointmentBtn-panel{text-align:center;}
+	.myappointmentBtn-panel a{width:95%;}
+	.innerpageTitle-panel h2{font-size:26px;}
+	.medicalreportTable{overflow:auto;}
+   .medicalreportTable .medicalreport-table{width:800px;}
+   .medicalreport-table tr td, .medicalreport-table tr th{padding-left:5px;}
+   .view-report, .delete-report{margin:0 4px;}
+   .uploadreport-form label{width:100%;}
+   .uploadreport-form .input-file{width:100%;}
+   .uploadreport-form .input-text{width:100%}
+   .uploadreport-form .field-upload{width:120px; margin-top:15px; margin-left:0;}
+   .uploadreport-form .input-field{padding-left:5px; padding-right:5px;}
+   .uploadreport-panel{padding-top:6px;}
+   .accountTable-inner{overflow:auto;}
+   .accountTable .account-table{width:750px;}
+   .myprofilem-img{width:30%;}
+   .myprofilem-discript{width:70%;}
+   .myprofilem-about{width:100%; padding-left:0; padding-top:12px;}
+   .myprofilem-discript p.emailcont{padding-top:12px;}
+   .signupDoctor-form .information{width:100%;}
+   .information .input-field, .information .input-select{padding-left:0; padding-right:0;}
+   .doctor-appointment .myprofilem-discript{min-height:inherit; width:100%; padding-left:0; padding-top:12px;}
+   .myprofilem-title{width:70%;}
+   .myprofilem-detail .profile-timingSolt{width:100%; padding-left:0; padding-top:12px;}
+   .myprofilem-detail .profile-timingSolt .slots-list li{width:100%; display:block;}
+   .myprofilem-header .myprofilem-title .appointment-time{padding-top:15px;}
+   .signupDoctor-form .input-select select{padding:0 3px;}
+   .signupDoctor-form .signup-mobile .signup-mcode{padding:0 10px;}
+   .header .col-lg-4{width:39.333%;}
+   .header .col-lg-8{width:60.667%;}
+   .step-appointment p{line-height:26px; font-size:20px;}
+   .pm-caption-decription{font-size:14px;}
+   .pm-caption h1{font-size:22px;}
+   .header .col-lg-8{padding-left:0;}
+   .video-consultation a{padding:0 16px;}
+   .profileDetail-panel{padding-left:12px; padding-right:12px;}
+   .popupprofile-panel .profileDetail-panel .consultProfile-img{width:58%;}
+   .popupprofile-panel .profileDetail-panel .consultProfile-detail{width:100%; padding-left:0;}
+   .popupprofile-panel .profileDetail-panel .profile-timingSolt{width:100%;}
+   .popupprofile-panel .profileDetail-panel .consult-charges{width:100%; padding-left:0;}
+   .md-effect-5 .md-content{width:92%; max-width:inherit; min-width:inherit;}
+   .popupprofile-header h3{font-size:20px;}
+   .input-field .col-lg-6.expiry-select{width:100%; padding-bottom:8px;}
+}

@@ -1,0 +1,76 @@
+<!-- <h1>Login</h1>
+<form [formGroup]="formRegister" (ngSubmit)="save()">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" formControlName="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <small id="nameIdHelp1" class="form-text text-muted" *ngIf="emailInvalid">Required</small>  
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" formControlName="password" class="form-control" id="exampleInputPassword1">
+      <small id="nameIdHelp2" class="form-text text-muted" *ngIf="passwordInvalid">Required</small>  
+    </div>
+    <button type="submit" class="btn btn-primary">Login</button>
+  </form>
+  <div class="pm-column-container pm-parallax-panel" style="background-color: #fff; background-image: url(../images/innerpabeTitle-bg.jpg); background-position: 0 top" data-stellar-background-ratio="0.5" data-stellar-vertical-offset="0">
+    <div class="container">
+        <div class="innerpageTitle-panel">
+            <h2>Sign In</h2>
+            <p>Sign In as a User or Doctor</p>
+        </div>
+    </div>
+</div> -->
+
+<div class="container">
+  <div class="signin-panel">
+    <div class="row">
+      <div class="col-lg-6 signin-left">
+        <div class="signin-block">
+          <h2>Sign In</h2>
+          <form class="signin-form" [formGroup]="formRegister" (ngSubmit)="save()">
+            <div class="input-field">
+              <label>User ID or Email</label>
+              <input autocomplete="off" data-val="true" formControlName="email" data-val-required="The User Name field is required."
+                id="strUserName" name="strUserName" next="Password" placeholder="Enter User ID or Email" tabindex="1"
+                title="Enter User ID or Email" type="text" value="" />
+              <span class="field-validation-valid" data-valmsg-for="strUserName" *ngIf="emailInvalid" data-valmsg-replace="true">Required</span>
+            </div>
+            <div class="input-field">
+              <label>Password</label>
+              <input autocomplete="off" formControlName="password" data-val="true" data-val-required="The Password field is required."
+                id="strPassword" name="strPassword" next="RememberMe" placeholder="Enter Password" tabindex="2"
+                title="Enter Password" type="password" />
+              <span class="field-validation-valid" data-valmsg-for="strPassword" *ngIf="passwordInvalid" data-valmsg-replace="true">Required</span>
+              <span class="field-validation-valid" data-valmsg-for="strPassword" *ngIf="userInvalid" data-valmsg-replace="true">Email or Password invalid</span>
+              <br>
+              <a href="#" class="forgot-pass">Forgot Password?</a>
+            </div>
+            <!-- <div class="input-form signup-checkbox">
+              <input class="input-check" data-val="true" data-val-required="The Remember Me field is required."
+                id="RememberMe" name="RememberMe" next="btnSubmit" tabindex="3" type="checkbox" value="true" /><input
+                name="RememberMe" type="hidden" value="false" />
+              <label>Remember Me</label>
+            </div> -->
+            <div class="signinBtn-block">
+              <span class="field-validation-valid" data-valmsg-for="ModelStateError"
+                data-valmsg-replace="true"></span><br />
+              <input type="submit" class="signinBtn" tabindex="4" name="" value="Sign In" id="btnSubmit">
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-lg-6 signin-right">
+        <div class="signinright">
+          <h2>Comfort of your Home. Reduced Costs. Renowned Medical Practitioners.</h2>
+          <ul class="signinbenefit-list">
+            <li>Trusted by millions and serving users world wide.</li>
+            <li>Most convenient for expats and travellers.</li>
+            <li>800+ doctors from 70+ specialties available anytime to help you.</li>
+            <li>It is absolutely FREE to get started!</li>
+          </ul>
+          <div class="signin-signup"><a [routerLink]="['/registeruser']" class="signup-here">SIGN UP HERE</a> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

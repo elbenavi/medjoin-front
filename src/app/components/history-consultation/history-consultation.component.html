@@ -1,0 +1,47 @@
+<!-- <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">User's Information</th>
+        <th scope="col">My Medical Report</th>
+        <th scope="col">Booking Schedule</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let appointment of appointments">
+        <td>
+            <p>{{appointment.user.firstName}} {{appointment.user.lastName}}</p>
+        </td>
+        <td>---</td>
+        <td>
+            <p>Date {{ appointment.preferredDate | date:'EEEE d LLL yyyy' }}</p>
+            <p>Time {{ appointment.preferredDate | date:'hh:mm aa' }} - {{ appointment.endAppoinment | date:'hh:mm aa' }}</p>
+        </td>
+        <td>
+            <button class="btn btn-primary">Consultation History {{appointment.isPassed}}</button>
+        </td>
+      </tr>
+    </tbody>
+  </table> -->
+
+  <div class="list-appointment" *ngFor="let appointment of appointments">
+    <div class="image">
+      <img src="{{appointment.user.imgProfile | imageProfile}}"  alt="...">
+    </div>
+    <div class="info-doctor">
+      <h4>{{appointment.user.firstName}} {{appointment.user.lastName}}</h4>
+      <p>{{appointment.user.email}}</p>
+      <p>{{appointment.user.phone}}</p>
+    </div>
+    <div class="medical-report">
+      <h4>MEDICAL REPORT</h4>
+    </div>
+    <div class="schedule">
+      <h4>BOOKING SCHEDULE</h4>
+      <p>Date <span>{{ appointment.preferredDate | date:'EEEE d LLL yyyy' }}</span></p>
+      <p>Time <span>{{ appointment.preferredDate | date:'hh:mm aa' }} - {{ appointment.endAppoinment | date:'hh:mm aa' }}</span></p>
+    </div>
+    <div class="footer">
+      <button class="btn btn-primary">Consultation History</button>
+    </div>
+  </div>
