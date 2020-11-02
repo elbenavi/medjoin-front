@@ -12,7 +12,8 @@ import * as moment from 'moment';
 })
 export class MedjoinService {
 
-  private url = 'https://medjoin20200725162501.azurewebsites.net';
+  // private url = 'https://medjoin20200725162501.azurewebsites.net';
+  private url = 'http://medjoin-back';
 
   constructor(private http: HttpClient) { }
 
