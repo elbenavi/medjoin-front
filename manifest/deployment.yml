@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: medjoin-front
+  labels:
+    app: medjoin-front
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: medjoin-front
+  template:
+    metadata:
+      labels:
+        app: medjoin-front
+    spec:
+      containers:
+      - name: medjoin-front
+        image: acrimagesmedjoin.azurecr.io/medjoinfront:(tag)
+        ports:
+        - containerPort: 80
+      imagePullSecrets:
+        - name: app-acr
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: medjoin-front
+spec:
+  type: LoadBalancer
+  selector:
+    app: medjoin-front
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
